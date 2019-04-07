@@ -17,8 +17,19 @@ namespace hw
             }
             Console.WriteLine(result);
         }
-        public static void task2()
+         static int task2(int n, int c)
         {
+            int res = 1;
+            int counter = 0;
+            while (n!=counter)
+            {
+                if (n % 1==0)
+                    res *= c;
+                c *= c;
+                n++;
+                counter++;
+            }
+            return res;
         }
     }
 }
