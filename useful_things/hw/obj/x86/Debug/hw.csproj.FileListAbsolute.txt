@@ -1,0 +1,6 @@
+/Users/daana/Pictures/всякое/useful_things/hw/bin/Debug/hw.exe
+/Users/daana/Pictures/всякое/useful_things/hw/bin/Debug/hw.pdb
+/Users/daana/Pictures/всякое/useful_things/hw/obj/x86/Debug/hw.csprojAssemblyReference.cache
+/Users/daana/Pictures/всякое/useful_things/hw/obj/x86/Debug/hw.csproj.CoreCompileInputs.cache
+/Users/daana/Pictures/всякое/useful_things/hw/obj/x86/Debug/hw.exe
+/Users/daana/Pictures/всякое/useful_things/hw/obj/x86/Debug/hw.pdb

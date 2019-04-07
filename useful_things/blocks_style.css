@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width:100%;
+    height: auto;
+}
+.flex-cont{
+    display: flex;
+    flex-flow: column nowrap;
+}
+header{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    background-image: url('pic.png');
+    
+}
+.top ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li{
+    font-size: 20px;
+    list-style: none;
+    margin: 0 20px;
+}
+ul li a{
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #000033;
+    text-transform: uppercase;
+}
