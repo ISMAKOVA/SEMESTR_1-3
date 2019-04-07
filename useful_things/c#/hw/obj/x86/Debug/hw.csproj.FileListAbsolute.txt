@@ -9,3 +9,9 @@
 /Users/daana/Pictures/всякое/I_NEED_IT/useful_things/c#/hw/obj/x86/Debug/hw.csproj.CoreCompileInputs.cache
 /Users/daana/Pictures/всякое/I_NEED_IT/useful_things/c#/hw/obj/x86/Debug/hw.exe
 /Users/daana/Pictures/всякое/I_NEED_IT/useful_things/c#/hw/obj/x86/Debug/hw.pdb
+/Users/daana/Projects/hw/bin/Debug/hw.exe
+/Users/daana/Projects/hw/bin/Debug/hw.pdb
+/Users/daana/Projects/hw/obj/x86/Debug/hw.csprojAssemblyReference.cache
+/Users/daana/Projects/hw/obj/x86/Debug/hw.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/hw/obj/x86/Debug/hw.exe
+/Users/daana/Projects/hw/obj/x86/Debug/hw.pdb
