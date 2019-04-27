@@ -16,5 +16,10 @@ namespace Coursework
         {
             InitializeComponent();
         }
+
+        private void Products_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

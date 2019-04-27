@@ -49,7 +49,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(66, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(661, 221);
+            this.dataGridView1.Size = new System.Drawing.Size(661, 264);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -73,14 +73,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(66, 311);
+            this.comboBox1.Location = new System.Drawing.Point(66, 365);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(372, 33);
             this.comboBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(444, 307);
+            this.button1.Location = new System.Drawing.Point(444, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 38);
             this.button1.TabIndex = 2;
@@ -89,7 +89,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(588, 307);
+            this.button2.Location = new System.Drawing.Point(588, 361);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 38);
             this.button2.TabIndex = 3;
@@ -100,13 +100,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 418);
+            this.ClientSize = new System.Drawing.Size(805, 506);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Products";
             this.Text = "Товары";
+            this.Load += new System.EventHandler(this.Products_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
