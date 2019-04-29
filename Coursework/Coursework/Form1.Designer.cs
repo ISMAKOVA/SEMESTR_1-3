@@ -42,6 +42,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -133,7 +135,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1073, 386);
+            this.button1.Location = new System.Drawing.Point(1073, 383);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 46);
             this.button1.TabIndex = 6;
@@ -142,7 +144,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1073, 311);
+            this.button2.Location = new System.Drawing.Point(833, 458);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(182, 46);
             this.button2.TabIndex = 7;
@@ -151,18 +153,40 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1073, 237);
+            this.button3.Location = new System.Drawing.Point(1073, 457);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(182, 46);
             this.button3.TabIndex = 8;
             this.button3.Text = "Сохранить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1073, 309);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(182, 46);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Товары";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1073, 235);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(182, 46);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Клиенты";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 518);
+            this.ClientSize = new System.Drawing.Size(1308, 605);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -196,6 +220,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 

@@ -16,5 +16,16 @@ namespace Coursework
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form Clients = new Clients();
+            Clients.Show();
+        }
     }
 }

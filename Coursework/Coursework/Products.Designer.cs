@@ -73,7 +73,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(66, 365);
+            this.comboBox1.Location = new System.Drawing.Point(66, 370);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(372, 33);
             this.comboBox1.TabIndex = 1;
@@ -82,7 +82,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(444, 361);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 38);
+            this.button1.Size = new System.Drawing.Size(138, 49);
             this.button1.TabIndex = 2;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(588, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 38);
+            this.button2.Size = new System.Drawing.Size(139, 49);
             this.button2.TabIndex = 3;
             this.button2.Text = "Удалить";
             this.button2.UseVisualStyleBackColor = true;
