@@ -27,5 +27,11 @@ namespace Coursework
             Form Clients = new Clients();
             Clients.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form Products = new Products();
+            Products.Show();
+        }
     }
 }

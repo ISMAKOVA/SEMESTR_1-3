@@ -18,11 +18,12 @@ namespace Coursework
         {
             InitializeComponent();
         }
-
+        string[] total = new string[0];
         int[] code_cl = new int [0];
         string[] fio = new string[0];
         int len;
         int num_row;
+        int dtgL;
         private void Clients_Load(object sender, EventArgs e)
         {
             LoadCl();
@@ -39,7 +40,7 @@ namespace Coursework
         {
             string[] client_txt = File.ReadAllLines("client.txt", Encoding.GetEncoding(1251));
             len = client_txt.Length;
-            for(int i = 0; i < len; i++)
+            for(int i = 0; i < len-1; i++)
             {
                 Array.Resize(ref code_cl, len);
                 Array.Resize(ref fio, len);
@@ -82,10 +83,22 @@ namespace Coursework
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+            dtgL = dataGridView1.RowCount;
             fio[len - 1] = textBox2.Text;
             DGV();
+            for (int i = 0; i < dtgL; i++)
+            {
+                Array.Resize(ref total, total.Length + 1);
+                total[i] = code_cl[i].ToString() +"#"+ fio[i];
+            }
+            File.WriteAllLines("client.txt", total, Encoding.GetEncoding(1251));
+         
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
 
         }
     }
