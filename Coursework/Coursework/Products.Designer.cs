@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.add_btn = new System.Windows.Forms.Button();
+            this.delete_btn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.change_btn = new System.Windows.Forms.Button();
+            this.save_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,24 +55,48 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(804, 264);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // button1
+            // Column1
             // 
-            this.button1.Location = new System.Drawing.Point(917, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 49);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Column1.FillWeight = 60.9137F;
+            this.Column1.HeaderText = "Код товара";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // button2
+            // Column2
             // 
-            this.button2.Location = new System.Drawing.Point(917, 349);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 49);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Удалить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Column2.FillWeight = 119.5432F;
+            this.Column2.HeaderText = "Товар";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 119.5432F;
+            this.Column3.HeaderText = "Цена";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // add_btn
+            // 
+            this.add_btn.Location = new System.Drawing.Point(917, 239);
+            this.add_btn.Name = "add_btn";
+            this.add_btn.Size = new System.Drawing.Size(138, 49);
+            this.add_btn.TabIndex = 2;
+            this.add_btn.Text = "Добавить";
+            this.add_btn.UseVisualStyleBackColor = true;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
+            // 
+            // delete_btn
+            // 
+            this.delete_btn.Location = new System.Drawing.Point(917, 349);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(139, 49);
+            this.delete_btn.TabIndex = 3;
+            this.delete_btn.Text = "Удалить";
+            this.delete_btn.UseVisualStyleBackColor = true;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // textBox1
             // 
@@ -96,57 +120,38 @@
             this.textBox3.Size = new System.Drawing.Size(293, 31);
             this.textBox3.TabIndex = 7;
             // 
-            // Column1
+            // change_btn
             // 
-            this.Column1.FillWeight = 60.9137F;
-            this.Column1.HeaderText = "Код товара";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.change_btn.Location = new System.Drawing.Point(916, 184);
+            this.change_btn.Name = "change_btn";
+            this.change_btn.Size = new System.Drawing.Size(139, 49);
+            this.change_btn.TabIndex = 8;
+            this.change_btn.Text = "Изменить";
+            this.change_btn.UseVisualStyleBackColor = true;
+            this.change_btn.Click += new System.EventHandler(this.change_btn_Click);
             // 
-            // Column2
+            // save_btn
             // 
-            this.Column2.FillWeight = 119.5432F;
-            this.Column2.HeaderText = "Товар";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 119.5432F;
-            this.Column3.HeaderText = "Цена";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(916, 184);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 49);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Изменить";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(916, 294);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 49);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Сохранить";
-            this.button4.UseVisualStyleBackColor = true;
+            this.save_btn.Location = new System.Drawing.Point(916, 294);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(139, 49);
+            this.save_btn.TabIndex = 9;
+            this.save_btn.Text = "Сохранить";
+            this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 506);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.save_btn);
+            this.Controls.Add(this.change_btn);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.delete_btn);
+            this.Controls.Add(this.add_btn);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Products";
             this.Text = "Товары";
@@ -160,15 +165,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button add_btn;
+        private System.Windows.Forms.Button delete_btn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button change_btn;
+        private System.Windows.Forms.Button save_btn;
     }
 }

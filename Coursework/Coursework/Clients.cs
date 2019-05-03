@@ -38,15 +38,22 @@ namespace Coursework
         }
         private void LoadCl()
         {
-            string[] client_txt = File.ReadAllLines("client.txt", Encoding.GetEncoding(1251));
-            len = client_txt.Length;
-            for(int i = 0; i < len-1; i++)
+            try
             {
-                Array.Resize(ref code_cl, len);
-                Array.Resize(ref fio, len);
-                string []ss = client_txt[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                code_cl[i] = int.Parse(ss[0]);
-                fio[i] = ss[1];
+                string[] client_txt = File.ReadAllLines("client.txt", Encoding.GetEncoding(1251));
+                len = client_txt.Length;
+                for (int i = 0; i < len - 1; i++)
+                {
+                    Array.Resize(ref code_cl, len);
+                    Array.Resize(ref fio, len);
+                    string[] ss = client_txt[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                    code_cl[i] = int.Parse(ss[0]);
+                    fio[i] = ss[1];
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Данные в файле заполнены неправильно");
             }
         }
         private void DGV()
