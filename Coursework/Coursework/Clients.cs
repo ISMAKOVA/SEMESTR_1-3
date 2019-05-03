@@ -73,11 +73,6 @@ namespace Coursework
             Array.Resize(ref fio, len);
             code_cl[len - 1] = code+1;
             code++;
-           /* DGV();
-            dataGridView1.Rows[num_row].Selected = false;
-            dataGridView1.Rows[len-1].Selected=true;
-            dataGridView1.CurrentCell = dataGridView1[0, len - 1];
-            num_row = dataGridView1.CurrentRow.Index;*/
             textBox1.Text = code.ToString();
             textBox2.Text = "";
 
