@@ -28,23 +28,38 @@ namespace Coursework
         private void Products_Load(object sender, EventArgs e)
         {
             LoadCl();
-            DGV();
+            DGV(len);
         }
         private void LoadCl()
         {
             try
             {
-                string[] client_txt = File.ReadAllLines("product.txt", Encoding.GetEncoding(1251));
+                string[] text = File.ReadAllLines("product.txt", Encoding.GetEncoding(1251));
+                HashSet<string> remEmpF = new HashSet<string>();
+                for(int i = 0; i < text.Length; i++)
+                {
+                    remEmpF.Add(text[i]);
+                }
+                remEmpF.Where(x => !string.IsNullOrWhiteSpace(x));
+                string[] client_txt = new string[0];
+                for(int i = 0; i < remEmpF.Count; i++)
+                {
+                    Array.Resize(ref client_txt, client_txt.Length + 1);
+                    client_txt[i] = remEmpF.ElementAt(i);
+                }
                 len = client_txt.Length;
                 for (int i = 0; i < len; i++)
                 {
-                    Array.Resize(ref code_prod, len);
-                    Array.Resize(ref product, len);
-                    Array.Resize(ref value, len);
-                    string[] ss = client_txt[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                    code_prod[i] = int.Parse(ss[0]);
-                    product[i] = ss[1];
-                    value[i] = ss[2];
+                    if (client_txt[i] != "")
+                    {
+                        Array.Resize(ref code_prod, len);
+                        Array.Resize(ref product, len);
+                        Array.Resize(ref value, len);
+                        string[] ss = client_txt[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                        code_prod[i] = int.Parse(ss[0]);
+                        product[i] = ss[1];
+                        value[i] = ss[2];
+                    }
                 }
             }
             catch
@@ -52,7 +67,7 @@ namespace Coursework
                 MessageBox.Show("Данные в файле заполнены неправильно");
             }
         }
-        private void DGV()
+        private void DGV(int len)
         {
             dataGridView1.Rows.Clear();
             for (int i = 0; i < len; i++)
@@ -66,7 +81,7 @@ namespace Coursework
         {
             product[num_row] = textBox2.Text;
             value[num_row] = textBox3.Text;
-            DGV();
+            DGV(len);
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -106,8 +121,8 @@ namespace Coursework
                 int dtgL = dataGridView1.RowCount;
                 product[len - 1] = textBox2.Text;
                 value[len - 1] = textBox3.Text;
-                DGV();
-                for (int i = 0; i < dtgL; i++)
+                DGV(dtgL-1);
+                for (int i = 0; i < dtgL-1; i++)
                 {
                     Array.Resize(ref total, total.Length + 1);
                     total[i] = code_prod[i].ToString() + "#" + product[i] + "#" + value[i];
