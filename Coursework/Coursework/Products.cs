@@ -28,7 +28,7 @@ namespace Coursework
         private void Products_Load(object sender, EventArgs e)
         {
             LoadCl();
-            DGV(len);
+            DGV(len-1);
         }
         private void LoadCl()
         {
@@ -41,6 +41,7 @@ namespace Coursework
                     remEmpF.Add(text[i]);
                 }
                 remEmpF.Where(x => !string.IsNullOrWhiteSpace(x));
+
                 string[] client_txt = new string[0];
                 for(int i = 0; i < remEmpF.Count; i++)
                 {
