@@ -29,12 +29,6 @@ namespace Coursework
             DGV(len);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            fio[num_row] = textBox2.Text;
-            DGV(len);
-
-        }
         private void LoadCl()
         {
             try
@@ -73,24 +67,29 @@ namespace Coursework
         private void DGV(int len)
         {
             dataGridView1.Rows.Clear();
-            for(int i = 0; i < len-1; i++)
+            for(int i = 0; i < len; i++)
             {
                 dataGridView1.Rows.Add(code_cl[i], fio[i]);
             }
         }
+        private void change_btn_Click(object sender, EventArgs e)
+        {
+            fio[num_row] = textBox2.Text;
+            DGV(len);
 
+        }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             try
             {
-                num_row = dataGridView1.CurrentRow.Index;
+                num_row = dataGridView1.CurrentCell.RowIndex;
                 textBox1.Text = dataGridView1.Rows[num_row].Cells[0].Value.ToString();
                 textBox2.Text = dataGridView1.Rows[num_row].Cells[1].Value.ToString();
             }
             catch { }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void add_btn_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows[len - 1].Cells[1].Value != null)
             {
@@ -105,14 +104,13 @@ namespace Coursework
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void save_btn_Click(object sender, EventArgs e)
         {
+            fio[len - 1] = textBox2.Text;
+            DGV(len);
             try
             {
-                int dtgL = dataGridView1.RowCount;
-                fio[len - 1] = textBox2.Text;
-                DGV(dtgL-1);
-                for (int i = 0; i < dtgL-1; i++)
+                for (int i = 0; i < len; i++)
                 {
                     Array.Resize(ref total, total.Length + 1);
                     total[i] = code_cl[i].ToString() + "#" + fio[i];
@@ -125,14 +123,14 @@ namespace Coursework
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void delete_btn_Click(object sender, EventArgs e)
         {
-            int dtgL = dataGridView1.RowCount;
             dataGridView1.Rows.Remove(dataGridView1.Rows[num_row]);
             textBox1.Text = "";
             textBox2.Text = "";
-            Array.Resize(ref code_cl, dtgL - 1);
-            Array.Resize(ref fio, dtgL - 1);
+            Array.Resize(ref code_cl, len - 1);
+            Array.Resize(ref fio, len - 1);
+            len--;
         }
     }
 

@@ -28,7 +28,7 @@ namespace Coursework
         private void Products_Load(object sender, EventArgs e)
         {
             LoadCl();
-            DGV(len-1);
+            DGV(len);
         }
         private void LoadCl()
         {
@@ -45,7 +45,7 @@ namespace Coursework
                 string[] client_txt = new string[0];
                 for(int i = 0; i < remEmpF.Count; i++)
                 {
-                    Array.Resize(ref client_txt, client_txt.Length + 1);
+                    Array.Resize(ref client_txt, remEmpF.Count);
                     client_txt[i] = remEmpF.ElementAt(i);
                 }
                 len = client_txt.Length;
@@ -89,19 +89,18 @@ namespace Coursework
         {
             try
             {
-                num_row = dataGridView1.CurrentRow.Index;
+                num_row = dataGridView1.CurrentCell.RowIndex;
                 textBox1.Text = dataGridView1.Rows[num_row].Cells[0].Value.ToString();
                 textBox2.Text = dataGridView1.Rows[num_row].Cells[1].Value.ToString();
                 textBox3.Text = dataGridView1.Rows[num_row].Cells[2].Value.ToString();
             }
             catch { }
         }
-
         private void add_btn_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows[len - 1].Cells[1].Value != null)
+            if (dataGridView1.Rows[len-1].Cells[1].Value != null)
             {
-                int code = code_prod[len - 1];
+                int code = code_prod[len-1];
                 len++;
                 Array.Resize(ref code_prod, len);
                 Array.Resize(ref product, len);
@@ -117,13 +116,12 @@ namespace Coursework
 
         private void save_btn_Click(object sender, EventArgs e)
         {
+            product[len - 1] = textBox2.Text;
+            value[len - 1] = textBox3.Text;
+            DGV(len);
             try
             {
-                int dtgL = dataGridView1.RowCount;
-                product[len - 1] = textBox2.Text;
-                value[len - 1] = textBox3.Text;
-                DGV(dtgL-1);
-                for (int i = 0; i < dtgL-1; i++)
+                for (int i = 0; i < len; i++)
                 {
                     Array.Resize(ref total, total.Length + 1);
                     total[i] = code_prod[i].ToString() + "#" + product[i] + "#" + value[i];
@@ -138,14 +136,14 @@ namespace Coursework
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
-            int dtgL = dataGridView1.RowCount;
             dataGridView1.Rows.Remove(dataGridView1.Rows[num_row]);
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
-            Array.Resize(ref code_prod, dtgL-1);
-            Array.Resize(ref product, dtgL - 1);
-            Array.Resize(ref value, dtgL - 1);
+            Array.Resize(ref code_prod, len-1);
+            Array.Resize(ref product, len - 1);
+            Array.Resize(ref value, len - 1);
+            len--;
 
         }
     }
