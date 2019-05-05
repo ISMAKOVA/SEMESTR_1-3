@@ -106,10 +106,11 @@ namespace Coursework
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            fio[len - 1] = textBox2.Text;
-            DGV(len);
+     
             try
             {
+                fio[len-1] = textBox2.Text;
+                DGV(len);
                 for (int i = 0; i < len; i++)
                 {
                     Array.Resize(ref total, total.Length + 1);

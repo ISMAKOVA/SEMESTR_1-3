@@ -54,9 +54,22 @@ namespace Coursework
                 if (text_prod[i] != "")
                 {
                     string[] ss = text_prod[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                    product_code.Items.Add(ss[0] + " " + ss[1]+" "+ss[2]);
+                    product_code.Items.Add(ss[0] + " " + ss[1]);
                 }
             }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int numUpD = (int)numericUpDown1.Value;
+            string dt = dateTimePicker1.Value.ToShortDateString();
+            string codeCl = client_code.Text;
+            string codeProd = product_code.Text;
+            dataGridView1.Rows.Add(len, codeCl, codeProd, numUpD, dt);
+            len++;
+            textBox1.Text = len.ToString();
 
         }
     }
