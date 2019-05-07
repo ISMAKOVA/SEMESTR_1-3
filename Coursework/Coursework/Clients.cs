@@ -19,7 +19,7 @@ namespace Coursework
             InitializeComponent();
         }
         string[] total = new string[0];
-        int[] code_cl = new int [0];
+        int[] code_cl = new int[0];
         string[] fio = new string[0];
         int len;
         int num_row;
@@ -49,7 +49,7 @@ namespace Coursework
                 len = client_txt.Length;
                 for (int i = 0; i < len; i++)
                 {
-                    if(client_txt[i] != "")
+                    if (client_txt[i] != "")
                     {
                         Array.Resize(ref code_cl, len);
                         Array.Resize(ref fio, len);
@@ -67,7 +67,7 @@ namespace Coursework
         private void DGV(int len)
         {
             dataGridView1.Rows.Clear();
-            for(int i = 0; i < len; i++)
+            for (int i = 0; i < len; i++)
             {
                 dataGridView1.Rows.Add(code_cl[i], fio[i]);
             }
@@ -106,11 +106,10 @@ namespace Coursework
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-     
+            fio[len - 1] = textBox2.Text;
+            DGV(len);
             try
             {
-                fio[len-1] = textBox2.Text;
-                DGV(len);
                 for (int i = 0; i < len; i++)
                 {
                     Array.Resize(ref total, total.Length + 1);
@@ -136,3 +135,4 @@ namespace Coursework
     }
 
 }
+
