@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Text;
 
 namespace Coursework
 {
@@ -18,18 +17,6 @@ namespace Coursework
         public Sell()
         {
             InitializeComponent();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Form Clients = new Clients();
-            Clients.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form Products = new Products();
-            Products.Show();
         }
 
         private void Sell_Load(object sender, EventArgs e)
@@ -67,11 +54,11 @@ namespace Coursework
         {
             int numUpD = (int)numericUpDown1.Value;
             string dt = dateTimePicker1.Value.ToShortDateString();
-            string codeCl = client_code.Text;
-            string codeProd = product_code.Text;
-            if (codeCl != "" && codeProd!="" && numUpD!=0)
+            string [] codeCl =client_code.Text.Split(new char[] { '-' },StringSplitOptions.RemoveEmptyEntries);
+            string []codeProd = product_code.Text.Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+            if (codeCl[0] != "" && codeProd[0]!="" && numUpD!=0)
             {
-                dataGridView1.Rows.Add(len, codeCl, codeProd, numUpD, dt);
+                dataGridView1.Rows.Add(len, codeCl[0],codeCl[1], codeProd[0],codeProd[1], numUpD, dt);
                 len++;
                 textBox1.Text = len.ToString();
             }
@@ -92,9 +79,10 @@ namespace Coursework
             for(int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Array.Resize(ref total, total.Length + 1);
-                total[i] = dataGridView1.Rows[i].Cells[0].Value.ToString()+" "+ dataGridView1.Rows[i].Cells[1].Value.ToString()+ " " +
-                    dataGridView1.Rows[i].Cells[2].Value.ToString()+ " " + dataGridView1.Rows[i].Cells[3].Value.ToString()+ " " +
-                    dataGridView1.Rows[i].Cells[4].Value.ToString();
+            for(int j=0; j < 6; j++)
+                {
+                    total[i] += dataGridView1.Rows[i].Cells[j].Value.ToString()+" ";
+                }
             }
             File.WriteAllLines("sell.txt", total, Encoding.GetEncoding(1251));
         }
