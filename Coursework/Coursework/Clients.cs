@@ -132,6 +132,11 @@ namespace Coursework
             Array.Resize(ref fio, len - 1);
             len--;
         }
+
+        private void Change_btn_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

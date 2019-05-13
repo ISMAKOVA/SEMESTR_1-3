@@ -92,6 +92,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Total";
             this.Text = "Total";
+            this.Load += new System.EventHandler(this.Total_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
