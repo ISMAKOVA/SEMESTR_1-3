@@ -13,64 +13,35 @@ namespace Coursework
 {
     public partial class Total : Form
     {
-        int len;
-        char d = '#';
-        int num_row;
-        int[] code_cl = new int[0];
-        int[] code_prod = new int[0];
-        string[] date = new string[0];
-        int[] num = new int[0];
-        string[] result = new string[0];
+        string result;
+        string codeCl;
+        string codeProd;
+        string value;
+        string date;
+        string num;
         public Total()
         {
             InitializeComponent();
         }
-        public static string[] StringTxt(string []txt, HashSet<string> A)
-        {
-            string[] str = new string[0];
-            for (int i = 0; i < txt.Length; i++)
-            {
-                A.Add(txt[i]);
-            }
-            A.Where(x => !string.IsNullOrWhiteSpace(x));
 
-            for (int i = 0; i < A.Count; i++)
-            {
-                Array.Resize(ref str, A.Count);
-                str[i] = A.ElementAt(i);
-            }
-            A.Clear();
-            return str;
-        }
         private void Total_Load(object sender, EventArgs e)
         {
-            string[] product = File.ReadAllLines("product.txt", Encoding.GetEncoding(1251));
-
-            var remEmpFA = new HashSet<string>();
-            string[] sell = File.ReadAllLines("sell.txt", Encoding.GetEncoding(1251));
-            string[] sells = StringTxt(sell, remEmpFA);
-            len = sells.Length;
-            for(int i=0; i < len; i++)
+            string[] sells = File.ReadAllLines("sell.txt", Encoding.GetEncoding(1251));
+            if (sells != null)
             {
-                if (sells[i] != "")
+                for (int i = 0; i < sells.Length; i++)
                 {
-                    string[] ss = sells[i].Split(d);
-                    Array.Resize(ref code_cl, len);
-                    Array.Resize(ref code_prod, len);
-                    Array.Resize(ref date, len);
-                    Array.Resize(ref num, len);
-                    Array.Resize(ref result, len);
-                    code_cl[i] = int.Parse(ss[0]);
-                    code_prod[i] = int.Parse(ss[1]);
-                    date[i] = ss[2];
-                    num[i] = int.Parse(ss[3]);
-                    result[i] = (int.Parse(ss[3]) * 1).ToString();
-
+                    string[] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                    result = (Convert.ToInt32(ss[5]) * Convert.ToInt32(ss[6])).ToString();
+                    codeCl = ss[2];
+                    codeProd = ss[4];
+                    value = ss[5];
+                    date = ss[7];
+                    num = ss[6];
+                    dataGridView1.Rows.Add(codeCl, codeProd, value, date, num, result);
                 }
+
             }
-
-
-
         }
     }
 }

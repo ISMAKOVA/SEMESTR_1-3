@@ -39,6 +39,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.change_btn = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
+            this.new_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,9 +82,9 @@
             // 
             // add_btn
             // 
-            this.add_btn.Location = new System.Drawing.Point(917, 239);
+            this.add_btn.Location = new System.Drawing.Point(916, 239);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(138, 49);
+            this.add_btn.Size = new System.Drawing.Size(139, 49);
             this.add_btn.TabIndex = 2;
             this.add_btn.Text = "Добавить";
             this.add_btn.UseVisualStyleBackColor = true;
@@ -91,7 +92,7 @@
             // 
             // delete_btn
             // 
-            this.delete_btn.Location = new System.Drawing.Point(917, 349);
+            this.delete_btn.Location = new System.Drawing.Point(916, 349);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(139, 49);
             this.delete_btn.TabIndex = 3;
@@ -133,7 +134,7 @@
             // 
             // save_btn
             // 
-            this.save_btn.Location = new System.Drawing.Point(916, 294);
+            this.save_btn.Location = new System.Drawing.Point(916, 58);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(139, 49);
             this.save_btn.TabIndex = 9;
@@ -141,11 +142,22 @@
             this.save_btn.UseVisualStyleBackColor = true;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
+            // new_btn
+            // 
+            this.new_btn.Location = new System.Drawing.Point(916, 294);
+            this.new_btn.Name = "new_btn";
+            this.new_btn.Size = new System.Drawing.Size(139, 49);
+            this.new_btn.TabIndex = 10;
+            this.new_btn.Text = "Новый";
+            this.new_btn.UseVisualStyleBackColor = true;
+            this.new_btn.Click += new System.EventHandler(this.New_btn_Click);
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 506);
+            this.Controls.Add(this.new_btn);
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.change_btn);
             this.Controls.Add(this.textBox3);
@@ -176,5 +188,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button change_btn;
         private System.Windows.Forms.Button save_btn;
+        private System.Windows.Forms.Button new_btn;
     }
 }

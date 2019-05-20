@@ -23,6 +23,7 @@ namespace Coursework
         string[] fio = new string[0];
         int len;
         int num_row;
+        int code;
         private void Clients_Load(object sender, EventArgs e)
         {
             LoadCl();
@@ -72,13 +73,44 @@ namespace Coursework
                 dataGridView1.Rows.Add(code_cl[i], fio[i]);
             }
         }
-        private void change_btn_Click(object sender, EventArgs e)
+
+
+        private void Change_btn_Click_1(object sender, EventArgs e)
         {
             fio[num_row] = textBox2.Text;
             DGV(len);
 
         }
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+
+        private void Add_btn_Click_1(object sender, EventArgs e)
+        {
+            fio[len - 1] = textBox2.Text;
+            DGV(len);
+
+        }
+
+        private void Save_btn_Click_1(object sender, EventArgs e)
+        {
+                for (int i = 0; i < len; i++)
+                {
+                    Array.Resize(ref total, total.Length + 1);
+                    total[i] = code_cl[i].ToString() + "#" + fio[i];
+                }
+                File.WriteAllLines("client.txt", total, Encoding.GetEncoding(1251));
+
+        }
+
+        private void Delete_btn_Click_1(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Remove(dataGridView1.Rows[num_row]);
+            textBox1.Text = "";
+            textBox2.Text = "";
+            Array.Resize(ref code_cl, len - 1);
+            Array.Resize(ref fio, len - 1);
+            len--;
+        }
+
+        private void DataGridView1_SelectionChanged_1(object sender, EventArgs e)
         {
             try
             {
@@ -89,11 +121,11 @@ namespace Coursework
             catch { }
         }
 
-        private void add_btn_Click(object sender, EventArgs e)
+        private void New_btn_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows[len - 1].Cells[1].Value != null)
             {
-                int code = code_cl[len - 1];
+                code = code_cl[len - 1];
                 len++;
                 Array.Resize(ref code_cl, len);
                 Array.Resize(ref fio, len);
@@ -102,40 +134,6 @@ namespace Coursework
                 textBox1.Text = code.ToString();
                 textBox2.Text = "";
             }
-        }
-
-        private void save_btn_Click(object sender, EventArgs e)
-        {
-            fio[len - 1] = textBox2.Text;
-            DGV(len);
-            try
-            {
-                for (int i = 0; i < len; i++)
-                {
-                    Array.Resize(ref total, total.Length + 1);
-                    total[i] = code_cl[i].ToString() + "#" + fio[i];
-                }
-                File.WriteAllLines("client.txt", total, Encoding.GetEncoding(1251));
-            }
-            catch
-            {
-                MessageBox.Show("Проверьте введенные данные");
-            }
-        }
-
-        private void delete_btn_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Remove(dataGridView1.Rows[num_row]);
-            textBox1.Text = "";
-            textBox2.Text = "";
-            Array.Resize(ref code_cl, len - 1);
-            Array.Resize(ref fio, len - 1);
-            len--;
-        }
-
-        private void Change_btn_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 

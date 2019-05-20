@@ -98,40 +98,21 @@ namespace Coursework
         }
         private void add_btn_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows[len-1].Cells[1].Value != null)
-            {
-                int code = code_prod[len-1];
-                len++;
-                Array.Resize(ref code_prod, len);
-                Array.Resize(ref product, len);
-                Array.Resize(ref value, len);
-                code_prod[len - 1] = code + 1;
-                code++;
-                textBox1.Text = code.ToString();
-                textBox2.Text = "";
-                textBox3.Text = "";
-            }
+            product[len - 1] = textBox2.Text;
+            value[len - 1] = textBox3.Text;
+            DGV(len);
 
         }
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            product[len - 1] = textBox2.Text;
-            value[len - 1] = textBox3.Text;
-            DGV(len);
-            try
-            {
+
                 for (int i = 0; i < len; i++)
                 {
                     Array.Resize(ref total, total.Length + 1);
                     total[i] = code_prod[i].ToString() + "#" + product[i] + "#" + value[i];
                 }
                 File.WriteAllLines("product.txt", total, Encoding.GetEncoding(1251));
-            }
-            catch
-            {
-                MessageBox.Show("Проверьте введенные данные");
-            }
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
@@ -145,6 +126,23 @@ namespace Coursework
             Array.Resize(ref value, len - 1);
             len--;
 
+        }
+
+        private void New_btn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows[len - 1].Cells[1].Value != null)
+            {
+                int code = code_prod[len - 1];
+                len++;
+                Array.Resize(ref code_prod, len);
+                Array.Resize(ref product, len);
+                Array.Resize(ref value, len);
+                code_prod[len - 1] = code + 1;
+                code++;
+                textBox1.Text = code.ToString();
+                textBox2.Text = "";
+                textBox3.Text = "";
+            }
         }
     }
 }

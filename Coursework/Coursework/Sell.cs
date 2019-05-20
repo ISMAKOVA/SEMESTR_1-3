@@ -14,6 +14,7 @@ namespace Coursework
     public partial class Sell : Form
     {
         int len = 1;
+        int length;
         public Sell()
         {
             InitializeComponent();
@@ -43,7 +44,19 @@ namespace Coursework
                 if (text_prod[i] != "")
                 {
                     string[] ss = text_prod[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                    product_code.Items.Add(ss[0] + "-" + ss[1]);
+                    product_code.Items.Add(ss[0] + "-" + ss[1]+"-"+ss[2]);
+                }
+            }
+
+            string[] sells = File.ReadAllLines("sell.txt", Encoding.GetEncoding(1251));
+            length = sells.Length;
+            for(int i=0; i < sells.Length; i++)
+            {
+                if (sells != null)
+                {
+                    string [] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                    dataGridView1.Rows.Add(ss);
+
                 }
             }
 
@@ -58,7 +71,7 @@ namespace Coursework
             string []codeProd = product_code.Text.Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
             if (codeCl[0] != "" && codeProd[0]!="" && numUpD!=0)
             {
-                dataGridView1.Rows.Add(len, codeCl[0],codeCl[1], codeProd[0],codeProd[1], numUpD, dt);
+                dataGridView1.Rows.Add(len, codeCl[0],codeCl[1], codeProd[0],codeProd[1], codeProd[2], numUpD, dt);
                 len++;
                 textBox1.Text = len.ToString();
             }
@@ -79,12 +92,18 @@ namespace Coursework
             for(int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Array.Resize(ref total, total.Length + 1);
-            for(int j=0; j < 6; j++)
+            for(int j=0; j < 8; j++)
                 {
-                    total[i] += dataGridView1.Rows[i].Cells[j].Value.ToString()+" ";
+                    total[i] += dataGridView1.Rows[i].Cells[j].Value.ToString()+"#";
                 }
             }
             File.WriteAllLines("sell.txt", total, Encoding.GetEncoding(1251));
+        }
+
+        private void New_btn_Click(object sender, EventArgs e)
+        {
+            int code_sell =Convert.ToInt32( (length + 1).ToString());
+           // textBox1.Text = code_sell.ToString()
         }
     }
 }
