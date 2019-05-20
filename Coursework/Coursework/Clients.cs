@@ -84,9 +84,15 @@ namespace Coursework
 
         private void Add_btn_Click_1(object sender, EventArgs e)
         {
-            fio[len - 1] = textBox2.Text;
-            DGV(len);
-
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Поле пустое");
+            }
+            else
+            {
+                fio[len - 1] = textBox2.Text;
+                DGV(len);
+            }
         }
 
         private void Save_btn_Click_1(object sender, EventArgs e)

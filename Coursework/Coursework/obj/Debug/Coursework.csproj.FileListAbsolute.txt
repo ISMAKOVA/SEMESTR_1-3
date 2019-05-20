@@ -12,3 +12,4 @@ C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Cou
 C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.pdb
 C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.MainForm.resources
 C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Total.resources
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Dependent.resources

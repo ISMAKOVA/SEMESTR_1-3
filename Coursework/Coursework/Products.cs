@@ -98,9 +98,16 @@ namespace Coursework
         }
         private void add_btn_Click(object sender, EventArgs e)
         {
-            product[len - 1] = textBox2.Text;
-            value[len - 1] = textBox3.Text;
-            DGV(len);
+            if (textBox2.Text == "" || textBox3.Text == "")
+            {
+                MessageBox.Show("Поля пустые");
+            }
+            else
+            {
+                product[len - 1] = textBox2.Text;
+                value[len - 1] = textBox3.Text;
+                DGV(len);
+            }
 
         }
 
@@ -130,18 +137,24 @@ namespace Coursework
 
         private void New_btn_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows[len - 1].Cells[1].Value != null)
+            try
             {
-                int code = code_prod[len - 1];
-                len++;
-                Array.Resize(ref code_prod, len);
-                Array.Resize(ref product, len);
-                Array.Resize(ref value, len);
-                code_prod[len - 1] = code + 1;
-                code++;
-                textBox1.Text = code.ToString();
-                textBox2.Text = "";
-                textBox3.Text = "";
+                if (dataGridView1.Rows[len - 1].Cells[1].Value != null)
+                {
+                    int code = code_prod[len - 1];
+                    len++;
+                    Array.Resize(ref code_prod, len);
+                    Array.Resize(ref product, len);
+                    Array.Resize(ref value, len);
+                    code_prod[len - 1] = code + 1;
+                    code++;
+                    textBox1.Text = code.ToString();
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                }
+            }
+            catch {
+                MessageBox.Show("Сохраните и попробуйте снова");
             }
         }
     }

@@ -32,6 +32,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button5
@@ -46,7 +47,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(83, 195);
+            this.button4.Location = new System.Drawing.Point(83, 196);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(182, 46);
             this.button4.TabIndex = 11;
@@ -56,7 +57,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(83, 262);
+            this.button1.Location = new System.Drawing.Point(83, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 46);
             this.button1.TabIndex = 13;
@@ -74,18 +75,28 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(83, 397);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(182, 46);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "С подчиненной";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 492);
+            this.ClientSize = new System.Drawing.Size(355, 614);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -96,5 +107,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

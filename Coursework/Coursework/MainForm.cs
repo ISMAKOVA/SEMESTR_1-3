@@ -16,11 +16,6 @@ namespace Coursework
         {
             InitializeComponent();
         }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
         private void Button5_Click(object sender, EventArgs e)
         {
             Form Clients = new Clients();
@@ -43,6 +38,12 @@ namespace Coursework
         {
             Form Total = new Total();
             Total.ShowDialog();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Form Dependent = new Dependent();
+            Dependent.ShowDialog();
         }
     }
 }
