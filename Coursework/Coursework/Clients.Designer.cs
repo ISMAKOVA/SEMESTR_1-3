@@ -88,6 +88,7 @@
             // 
             // add_btn
             // 
+            this.add_btn.Enabled = false;
             this.add_btn.Location = new System.Drawing.Point(904, 316);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(138, 49);
@@ -149,7 +150,7 @@
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Clients";
-            this.Text = "Clients";
+            this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.Clients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

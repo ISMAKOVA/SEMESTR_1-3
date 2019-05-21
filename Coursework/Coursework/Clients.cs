@@ -84,6 +84,7 @@ namespace Coursework
 
         private void Add_btn_Click_1(object sender, EventArgs e)
         {
+            add_btn.Enabled = false;
             if (textBox2.Text == "")
             {
                 MessageBox.Show("Поле пустое");
@@ -97,12 +98,13 @@ namespace Coursework
 
         private void Save_btn_Click_1(object sender, EventArgs e)
         {
-                for (int i = 0; i < len; i++)
-                {
-                    Array.Resize(ref total, total.Length + 1);
-                    total[i] = code_cl[i].ToString() + "#" + fio[i];
-                }
-                File.WriteAllLines("client.txt", total, Encoding.GetEncoding(1251));
+            for (int i = 0; i < len; i++)
+            {
+                Array.Resize(ref total, total.Length + 1);
+                total[i] = code_cl[i].ToString() + "#" + fio[i];
+            }
+            File.WriteAllLines("client.txt", total, Encoding.GetEncoding(1251));
+            MessageBox.Show("Данные сохранены");
 
         }
 
@@ -129,6 +131,7 @@ namespace Coursework
 
         private void New_btn_Click(object sender, EventArgs e)
         {
+            add_btn.Enabled = true;
             if (dataGridView1.Rows[len - 1].Cells[1].Value != null)
             {
                 code = code_cl[len - 1];

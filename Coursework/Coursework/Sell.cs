@@ -125,6 +125,7 @@ namespace Coursework
                 }
             }
             File.WriteAllLines("sell.txt", total, Encoding.GetEncoding(1251));
+            MessageBox.Show("Данные сохранены");
         }
 
         private void New_btn_Click(object sender, EventArgs e)

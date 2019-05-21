@@ -82,7 +82,8 @@
             // 
             // add_btn
             // 
-            this.add_btn.Location = new System.Drawing.Point(916, 239);
+            this.add_btn.Enabled = false;
+            this.add_btn.Location = new System.Drawing.Point(916, 294);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(139, 49);
             this.add_btn.TabIndex = 2;
@@ -144,7 +145,7 @@
             // 
             // new_btn
             // 
-            this.new_btn.Location = new System.Drawing.Point(916, 294);
+            this.new_btn.Location = new System.Drawing.Point(916, 239);
             this.new_btn.Name = "new_btn";
             this.new_btn.Size = new System.Drawing.Size(139, 49);
             this.new_btn.TabIndex = 10;

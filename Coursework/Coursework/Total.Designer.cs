@@ -33,7 +33,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +47,6 @@
             this.Column3,
             this.Column6,
             this.Column5,
-            this.Column4,
             this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(28, 47);
             this.dataGridView1.Name = "dataGridView1";
@@ -64,7 +62,7 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Товар";
+            this.Column3.HeaderText = "Количество товаров";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
@@ -80,12 +78,6 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Количество";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Итого";
@@ -99,7 +91,7 @@
             this.ClientSize = new System.Drawing.Size(1192, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Total";
-            this.Text = "Total";
+            this.Text = "Итог";
             this.Load += new System.EventHandler(this.Total_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -113,7 +105,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

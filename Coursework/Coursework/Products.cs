@@ -98,6 +98,7 @@ namespace Coursework
         }
         private void add_btn_Click(object sender, EventArgs e)
         {
+            add_btn.Enabled = false;
             if (textBox2.Text == "" || textBox3.Text == "")
             {
                 MessageBox.Show("Поля пустые");
@@ -113,13 +114,13 @@ namespace Coursework
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-
-                for (int i = 0; i < len; i++)
-                {
-                    Array.Resize(ref total, total.Length + 1);
-                    total[i] = code_prod[i].ToString() + "#" + product[i] + "#" + value[i];
-                }
-                File.WriteAllLines("product.txt", total, Encoding.GetEncoding(1251));
+            for (int i = 0; i < len; i++)
+            {
+                Array.Resize(ref total, total.Length + 1);
+                total[i] = code_prod[i].ToString() + "#" + product[i] + "#" + value[i];
+            }
+            File.WriteAllLines("product.txt", total, Encoding.GetEncoding(1251));
+            MessageBox.Show("Данные сохранены");
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
@@ -137,6 +138,7 @@ namespace Coursework
 
         private void New_btn_Click(object sender, EventArgs e)
         {
+            add_btn.Enabled = true;
             try
             {
                 if (dataGridView1.Rows[len - 1].Cells[1].Value != null)

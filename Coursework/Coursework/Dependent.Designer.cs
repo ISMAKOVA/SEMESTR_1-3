@@ -159,7 +159,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Dependent";
-            this.Text = "Dependent";
+            this.Text = "С подчиненной";
             this.Load += new System.EventHandler(this.Dependent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
