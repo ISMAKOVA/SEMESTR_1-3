@@ -14,14 +14,12 @@ namespace Coursework
 {
     public partial class Total : Form
     {
-        string [] result= new string[0];
         int [] codeCl= new int[0];
-        string [] codeProd= new string[0];
-        string [] value= new string[0];
-        string [] date= new string[0];
-        string [] num= new string[0];
+        int [] value= new int[0];
+        int [] num= new int[0];
         int[] code_cl = new int[0];
         string[] fio = new string[0];
+        string[] fioCl = new string[0];
         int len;
         int len1;
         public Total()
@@ -45,41 +43,56 @@ namespace Coursework
 
             string[] sells = File.ReadAllLines("sell.txt", Encoding.GetEncoding(1251));
             len1 = sells.Length;
-            string[] totalStr = new string[len1];
-           // var numProd = new List<string>();
-            if (sells != null)
+            for(int i = 0; i < len1; i++)
             {
-                for (int i = 0; i < len1; i++)
+                Array.Resize(ref codeCl, len1);
+                Array.Resize(ref fioCl, len1);
+                Array.Resize(ref value, len1);
+                Array.Resize(ref num, len1);
+                string[] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                codeCl[i] = Convert.ToInt32(ss[1]);
+                fioCl[i] = ss[2];
+                value[i] = Convert.ToInt32(ss[5]);
+                num[i] = Convert.ToInt32(ss[6]);
+            }
+
+
+
+           // string[] totalStr = new string[len1];
+          
+            DGV();
+            
+        }
+        private void DGV()
+        {
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < len; i++)
+            {
+                int counter = 0;
+                int sumProd = 0;
+                int result=1;
+                dataGridView1.Rows.Add(code_cl[i],fio[i]);
+                for(int j = 0; j < len1; j++)
                 {
-                    Array.Resize(ref result,len1);
-                    Array.Resize(ref codeCl, len1);
-                    Array.Resize(ref codeProd, len1);
-                    Array.Resize(ref value, len1);
-                    Array.Resize(ref date, len1);
-                    Array.Resize(ref num, len1);
-                    string[] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                    result[i] = (Convert.ToInt32(ss[5]) * Convert.ToInt32(ss[6])).ToString();
-                    codeCl[i] = Convert.ToInt32(ss[1]);
-                    codeProd[i] = ss[4];
-                    value[i] = ss[5];
-                    date[i] = ss[7];
-                    num[i] = ss[6];
-                    for (int j = 0; j < len1; j++)
+                    if (dataGridView1.Rows[i].Cells[0].Value.ToString() == codeCl[j].ToString())
                     {
-                        if (code_cl[j] == codeCl[i])
-                        {
-                            totalStr[i] = fio[j]+ num[i]+ value[i]+ date[i]+ result[i];
-                            dataGridView1.Rows.Add(fio[j], num[i], value[i], date[i], result[i]);
-                            // numProd.Add(codeProd[i]);
-                        }
-                        //сделать выбору по товарам: клиент купил столько-то товаров на такую-то общую сумму
+                        counter++;
+                        sumProd += num[j];
+                        result = sumProd * value[j];
 
                     }
-                    //dataGridView1.Rows.Add(fio[i], numProd.Count, value[i], date[i], num[i], result[i]);
-                   
-                }
+                    dataGridView1.Rows[i].Cells[2].Value = counter;
+                    dataGridView1.Rows[i].Cells[3].Value = sumProd;
+                    if (result == 1)
+                    {
+                        dataGridView1.Rows[i].Cells[4].Value = 0;
+                    }
+                    else
+                    dataGridView1.Rows[i].Cells[4].Value = result;
 
+                }
             }
+
         }
     }
 }
