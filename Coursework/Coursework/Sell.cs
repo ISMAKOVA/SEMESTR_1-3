@@ -119,7 +119,7 @@ namespace Coursework
             for(int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Array.Resize(ref total, total.Length + 1);
-            for(int j=0; j < 8; j++)
+                for(int j=0; j < 8; j++)
                 {
                     total[i] += dataGridView1.Rows[i].Cells[j].Value.ToString()+"#";
                 }

@@ -15,6 +15,7 @@ namespace Coursework
     {
         int len;
         int num_row;
+        int valueProd;
         int[] code_prod = new int[0];
         string[] product = new string[0];
         string[] value = new string[0];
@@ -114,13 +115,19 @@ namespace Coursework
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < len; i++)
+
+            int countStr = dataGridView1.Rows.Count;
+            string[] saveProd = new string[countStr];
+            for (int i = 0; i < countStr; i++)
             {
-                Array.Resize(ref total, total.Length + 1);
-                total[i] = code_prod[i].ToString() + "#" + product[i] + "#" + value[i];
+                for (int j = 0; j < 3; j++)
+                {
+                    saveProd[i] += dataGridView1.Rows[i].Cells[j].Value + "#";
+                    File.WriteAllLines("product.txt", saveProd, Encoding.GetEncoding(1251));
+                }
             }
-            File.WriteAllLines("product.txt", total, Encoding.GetEncoding(1251));
             MessageBox.Show("Данные сохранены");
+
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
@@ -157,6 +164,14 @@ namespace Coursework
             }
             catch {
                 MessageBox.Show("Сохраните и попробуйте снова");
+            }
+        }
+
+        private void TextBox3_Leave(object sender, EventArgs e)
+        {
+            if (!Int32.TryParse(textBox3.Text, out valueProd))
+            {
+                MessageBox.Show("Должно быть число без пробелов");
             }
         }
     }

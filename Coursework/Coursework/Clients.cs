@@ -18,7 +18,6 @@ namespace Coursework
         {
             InitializeComponent();
         }
-        string[] total = new string[0];
         int[] code_cl = new int[0];
         string[] fio = new string[0];
         int len;
@@ -75,37 +74,19 @@ namespace Coursework
         }
 
 
-        private void Change_btn_Click_1(object sender, EventArgs e)
-        {
-            fio[num_row] = textBox2.Text;
-            DGV(len);
-
-        }
-
-        private void Add_btn_Click_1(object sender, EventArgs e)
-        {
-            add_btn.Enabled = false;
-            if (textBox2.Text == "")
-            {
-                MessageBox.Show("Поле пустое");
-            }
-            else
-            {
-                fio[len - 1] = textBox2.Text;
-                DGV(len);
-            }
-        }
-
         private void Save_btn_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < len; i++)
+            int countStr = dataGridView1.Rows.Count;
+            string[] saveClient = new string[countStr];
+            for (int i = 0; i < countStr; i++)
             {
-                Array.Resize(ref total, total.Length + 1);
-                total[i] = code_cl[i].ToString() + "#" + fio[i];
+                for (int j = 0; j < 2; j++)
+                {
+                    saveClient[i] += dataGridView1.Rows[i].Cells[j].Value + "#";
+                    File.WriteAllLines("client.txt", saveClient, Encoding.GetEncoding(1251));
+                }
             }
-            File.WriteAllLines("client.txt", total, Encoding.GetEncoding(1251));
             MessageBox.Show("Данные сохранены");
-
         }
 
         private void Delete_btn_Click_1(object sender, EventArgs e)
@@ -142,6 +123,26 @@ namespace Coursework
                 code++;
                 textBox1.Text = code.ToString();
                 textBox2.Text = "";
+            }
+        }
+
+        private void Change_btn_Click(object sender, EventArgs e)
+        {
+            fio[num_row] = textBox2.Text;
+            DGV(len);
+        }
+
+        private void Add_btn_Click(object sender, EventArgs e)
+        {
+            add_btn.Enabled = false;
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Поле пустое");
+            }
+            else
+            {
+                fio[len - 1] = textBox2.Text;
+                DGV(len);
             }
         }
     }

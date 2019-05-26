@@ -55,11 +55,6 @@ namespace Coursework
                 value[i] = Convert.ToInt32(ss[5]);
                 num[i] = Convert.ToInt32(ss[6]);
             }
-
-
-
-           // string[] totalStr = new string[len1];
-          
             DGV();
             
         }

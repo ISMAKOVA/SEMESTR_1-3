@@ -54,6 +54,7 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(66, 58);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(804, 264);
             this.dataGridView1.TabIndex = 0;
@@ -63,6 +64,7 @@
             // 
             this.Column1.FillWeight = 60.9137F;
             this.Column1.HeaderText = "Код товара";
+            this.Column1.MinimumWidth = 10;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -70,6 +72,7 @@
             // 
             this.Column2.FillWeight = 119.5432F;
             this.Column2.HeaderText = "Товар";
+            this.Column2.MinimumWidth = 10;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -77,6 +80,7 @@
             // 
             this.Column3.FillWeight = 119.5432F;
             this.Column3.HeaderText = "Цена";
+            this.Column3.MinimumWidth = 10;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
@@ -122,6 +126,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(293, 31);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Leave += new System.EventHandler(this.TextBox3_Leave);
             // 
             // change_btn
             // 

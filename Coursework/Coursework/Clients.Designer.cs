@@ -59,7 +59,7 @@
             this.change_btn.TabIndex = 16;
             this.change_btn.Text = "Изменить";
             this.change_btn.UseVisualStyleBackColor = true;
-            this.change_btn.Click += new System.EventHandler(this.Change_btn_Click_1);
+            this.change_btn.Click += new System.EventHandler(this.Change_btn_Click);
             // 
             // textBox2
             // 
@@ -95,7 +95,7 @@
             this.add_btn.TabIndex = 11;
             this.add_btn.Text = "Добавить";
             this.add_btn.UseVisualStyleBackColor = true;
-            this.add_btn.Click += new System.EventHandler(this.Add_btn_Click_1);
+            this.add_btn.Click += new System.EventHandler(this.Add_btn_Click);
             // 
             // dataGridView1
             // 
