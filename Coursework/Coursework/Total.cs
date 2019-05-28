@@ -83,7 +83,7 @@ namespace Coursework
                         dataGridView1.Rows[i].Cells[4].Value = 0;
                     }
                     else
-                    dataGridView1.Rows[i].Cells[4].Value = result;
+                        dataGridView1.Rows[i].Cells[4].Value = result;
 
                 }
             }

@@ -50,6 +50,7 @@
             this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(28, 47);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1123, 527);
             this.dataGridView1.TabIndex = 1;
@@ -57,30 +58,35 @@
             // Column5
             // 
             this.Column5.HeaderText = "Код клиента";
+            this.Column5.MinimumWidth = 10;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Клиент";
+            this.Column2.MinimumWidth = 10;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Количество товаров";
+            this.Column3.MinimumWidth = 10;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Количество проданных товаров";
+            this.Column4.MinimumWidth = 10;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Итого";
+            this.Column1.MinimumWidth = 10;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -91,7 +97,7 @@
             this.ClientSize = new System.Drawing.Size(1192, 611);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Total";
-            this.Text = "Итог";
+            this.Text = "Итоги";
             this.Load += new System.EventHandler(this.Total_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -45,7 +45,6 @@ namespace Coursework
                 Array.Resize(ref fio, len1);
                 if (text_cl[i] != "")
                 {
-
                     string[] ss = text_cl[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
                     codeCl[i] = ss[0];
                     fio[i] = ss[1];
@@ -78,7 +77,6 @@ namespace Coursework
                 {
                     string [] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
                     dataGridView1.Rows.Add(ss);
-
                 }
             }
         }
@@ -135,7 +133,6 @@ namespace Coursework
             product_code.SelectedIndex = -1;
             numericUpDown1.Value = 0;
             add_btn.Enabled = true;
-           // dt = new DateTime().ToShortDateString();
             
         }
 
