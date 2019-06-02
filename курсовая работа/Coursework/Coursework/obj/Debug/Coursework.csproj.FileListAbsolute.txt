@@ -1,0 +1,15 @@
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\bin\Debug\Coursework.exe.config
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\bin\Debug\Coursework.exe
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\bin\Debug\Coursework.pdb
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Clients.resources
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Sell.resources
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Products.resources
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Properties.Resources.resources
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.exe
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.pdb
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.MainForm.resources
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Total.resources
+C:\Users\Даяна Исмакова\Desktop\проги\I_NEED_IT\Coursework\Coursework\obj\Debug\Coursework.Dependent.resources
