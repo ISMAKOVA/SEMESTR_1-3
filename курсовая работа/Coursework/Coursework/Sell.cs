@@ -75,11 +75,25 @@ namespace Coursework
             {
                 if (sells != null)
                 {
-                    string [] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                    dataGridView1.Rows.Add(ss);
+                    string[] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                    for (int j = 0; j < len1; j++)
+                    {
+                        if (ss[1] == codeCl[j])
+                        {
+                            for (int k = 0; k < len2; k++)
+                            {
+                                if (ss[2] == codeProd[k])
+                                {
+                                    dataGridView1.Rows.Add(ss[0], codeCl[j], fio[j], codeProd[k], product[k], value[k], ss[3], ss[4]);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
+
+
 
         private void add_btn_Click(object sender, EventArgs e)
         {
@@ -117,10 +131,12 @@ namespace Coursework
             for(int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 Array.Resize(ref total, total.Length + 1);
-                for(int j=0; j < 8; j++)
-                {
-                    total[i] += dataGridView1.Rows[i].Cells[j].Value.ToString()+"#";
-                }
+                    // total[i] += dataGridView1.Rows[i].Cells[j].Value.ToString()+"#";
+                    total[i] += dataGridView1.Rows[i].Cells[0].Value.ToString() + "#"+
+                        dataGridView1.Rows[i].Cells[1].Value.ToString() + "#"+
+                        dataGridView1.Rows[i].Cells[3].Value.ToString() + "#"+
+                        dataGridView1.Rows[i].Cells[6].Value.ToString() + "#"+
+                        dataGridView1.Rows[i].Cells[7].Value.ToString();
             }
             File.WriteAllLines("sell.txt", total, Encoding.GetEncoding(1251));
             MessageBox.Show("Данные сохранены");

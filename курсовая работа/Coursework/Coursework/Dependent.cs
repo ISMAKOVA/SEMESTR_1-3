@@ -13,19 +13,20 @@ namespace Coursework
 {
     public partial class Dependent : Form
     {
+        int len;
+        int len2;
+        int len_sell;
         int[] code_cl = new int[0];
         string[] fio = new string[0];
-        int len;
-        string[] code_sell = new string[0];
-        string[] code_client = new string[0];
-        string[] code_prod = new string[0];
+        int[] codeCl = new int[0];
+        int[] codeProd = new int[0];
+        int[] codeSell = new int[0];
+        int[] num = new int[0];
+        int[] code_prod = new int[0];
         string[] product = new string[0];
         string[] value = new string[0];
-        string[] num = new string[0];
         string[] date = new string[0];
-        int [] total = new int[0];
         int num_row;
-        int len1;
         public Dependent()
         {
             InitializeComponent();
@@ -43,6 +44,40 @@ namespace Coursework
                 fio[i] = ss[1];
             }
 
+            string[] text_prod = File.ReadAllLines("product.txt", Encoding.GetEncoding(1251));
+            len2 = text_prod.Length;
+            for (int i = 0; i < len2; i++)
+            {
+                Array.Resize(ref code_prod, len2);
+                Array.Resize(ref product, len2);
+                Array.Resize(ref value, len2);
+                if (text_prod[i] != "")
+                {
+                    string[] ss = text_prod[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                    code_prod[i] = Convert.ToInt32(ss[0]);
+                    product[i] = ss[1];
+                    value[i] = ss[2];
+                }
+            }
+            string[] sells = File.ReadAllLines("sell.txt", Encoding.GetEncoding(1251));
+            len_sell = sells.Length;
+            for (int i = 0; i < len_sell; i++)
+            {
+                Array.Resize(ref codeSell, len_sell);
+                Array.Resize(ref codeCl, len_sell);
+                Array.Resize(ref codeProd, len_sell);
+                Array.Resize(ref num, len_sell);
+                Array.Resize(ref date, len_sell);
+
+                string[] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                codeSell[i] = Convert.ToInt32(ss[0]);
+                codeCl[i] = Convert.ToInt32(ss[1]);
+                codeProd[i] =Convert.ToInt32(ss[2]);
+                num[i] = Convert.ToInt32(ss[3]);
+                date[i] = ss[4];
+            }
+
+
         }
         private void DGV(int len)
         {
@@ -52,35 +87,9 @@ namespace Coursework
                 dataGridView1.Rows.Add(code_cl[i], fio[i]);
             }
         }
-        public void LoadSell()
-        {
-            string[] sell = File.ReadAllLines("sell.txt", Encoding.GetEncoding(1251));
-            len1 = sell.Length;
-            for(int i=0; i < len1; i++)
-            {
-                Array.Resize(ref code_sell, len1);
-                Array.Resize(ref code_prod, len1);
-                Array.Resize(ref code_client, len1);
-                Array.Resize(ref product, len1);
-                Array.Resize(ref value, len1);
-                Array.Resize(ref num, len1);
-                Array.Resize(ref date, len1);
-                Array.Resize(ref total, len1);
-                string[] ss = sell[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                code_sell[i] = ss[0];
-                code_client[i] = ss[1];
-                code_prod[i] = ss[3];
-                product[i] = ss[4];
-                value[i] = ss[5];
-                num[i] = ss[6];
-                date[i] = ss[7];
-                total[i] = Convert.ToInt32(ss[5]) * Convert.ToInt32(ss[6]);
-            }
-        }
 
         private void Dependent_Load(object sender, EventArgs e)
         {
-            LoadSell();
             Loadc();
             DGV(len);
         }
@@ -92,18 +101,26 @@ namespace Coursework
             textBox1.Text = "";
             int result = 0;
             num_row = dataGridView1.CurrentCell.RowIndex;
-            string kodeCl = dataGridView1.Rows[num_row].Cells[0].Value.ToString();
-            for(int i = 0; i < len1; i++)
+
+            int kodeCl = Convert.ToInt32(dataGridView1.Rows[num_row].Cells[0].Value.ToString());
+            for(int i = 0; i < len_sell; i++)
             {
-                if (kodeCl == code_client[i])
+                if (kodeCl == codeCl[i])
                 {
-                    dataGridView2.Rows.Add(code_sell[i], code_prod[i], product[i], value[i], num[i], date[i]);
-                    result += total[i];
-                    textBox1.Text = result.ToString();
+                    for (int j = 0; j < len_sell; j++) {
+
+                        if (codeProd[i] == code_prod[j]) {
+                            result += Convert.ToInt32(value[j]) * num[i];
+                            dataGridView2.Rows.Add(codeSell[i], codeProd[i], product[j], value[j], num[i], date[j]);
+                            textBox1.Text = result.ToString();
+                        }
+                    }
                 }
             }
 
-            
+
+
+           
 
 
         }
