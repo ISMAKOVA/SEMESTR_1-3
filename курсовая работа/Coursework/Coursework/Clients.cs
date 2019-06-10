@@ -30,15 +30,18 @@ namespace Coursework
         }
 
         private void LoadCl()
+        //считываение данных при загрузке
         {
             try
             {
+                //получаем данные в массив text
                 string[] text = File.ReadAllLines("client.txt", Encoding.GetEncoding(1251));
                 HashSet<string> remEmpF = new HashSet<string>();
                 for (int i = 0; i < text.Length; i++)
                 {
                     remEmpF.Add(text[i]);
                 }
+                //избавляемся от пустых строк в текстовом файле
                 remEmpF.Where(x => !string.IsNullOrWhiteSpace(x));
                 string[] client_txt = new string[0];
                 for (int i = 0; i < remEmpF.Count; i++)
@@ -54,8 +57,8 @@ namespace Coursework
                         Array.Resize(ref code_cl, len);
                         Array.Resize(ref fio, len);
                         string[] ss = client_txt[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                        code_cl[i] = int.Parse(ss[0]);
-                        fio[i] = ss[1];
+                        code_cl[i] = int.Parse(ss[0]);//массив с кодом клиентов
+                        fio[i] = ss[1];//массив фамилий клиентов
                     }
                 }
             }
@@ -64,11 +67,13 @@ namespace Coursework
                 MessageBox.Show("Данные в файле заполнены неправильно");
             }
         }
-        private void DGV(int len)
+        private void DGV(int len)//заполнение таблицы
         {
+            //очищение таблицы перед заполнением
             dataGridView1.Rows.Clear();
             for (int i = 0; i < len; i++)
             {
+                //добавление строк
                 dataGridView1.Rows.Add(code_cl[i], fio[i]);
             }
         }

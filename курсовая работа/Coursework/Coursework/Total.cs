@@ -74,60 +74,22 @@ namespace Coursework
                 num[i] = Convert.ToInt32(ss[3]);
             }
             DGV();
-           // DGV2();
             
         }
         private void DGV()
         {
-            /* dataGridView1.Rows.Clear();
-             for (int i = 0; i < len1; i++)
-             {
-                 int counter = 0;
-                 int sumProd = 0;
-                 int [] result=new int[len1];
-                 int res = 0;
-                 dataGridView1.Rows.Add(code_cl[i],fio[i]);
-                 for(int j = 0; j < len_sell; j++)
-                 {
-                     if (dataGridView1.Rows[i].Cells[0].Value.ToString() == codeCl[j].ToString())
-                     {
-                         counter++;
-                         sumProd += num[j];
-                         for(int k = 0; k < len2; k++)
-                         {
-                             if (codeProd[i] == code_prod[k])
-                             {
-                                 result[i] = Convert.ToInt32(value[k]) * num[i];
-                                // result = sumProd * Convert.ToInt32(value[k]); //сделать правильный расчет итогов 
-                                 res += result[i];
-                             }
-                         }
-
-                     }
-                     dataGridView1.Rows[i].Cells[2].Value = counter;
-                     dataGridView1.Rows[i].Cells[3].Value = sumProd;
-                     if (result[i] == 1)
-                     {
-                         dataGridView1.Rows[i].Cells[4].Value = 0;
-                     }
-                     else
-                         dataGridView1.Rows[i].Cells[4].Value = res;
-
-                 }
-             }*/
+            //очищаем таблицу
             dataGridView1.Rows.Clear();
-            int[] sumProd = new int[0];
-            int[] result = new int[0];
-            int[] counter = new int[0];
+            int[] sumProd = new int[0];//количество всех товаров
+            int[] result = new int[0];//итого 
+            int[] counter = new int[0];//количество купленных наименований товаров
             for (int i=0; i < len1; i++)
             {
-               // dataGridView1.Rows.Add(code_cl[i], fio[i]);
-
                 for (int j = 0; j < len_sell; j++)
                 {
-                    Array.Resize(ref counter, len_sell);
-                    Array.Resize(ref sumProd, len_sell);
-                    Array.Resize(ref result, len_sell);
+                    Array.Resize(ref counter, len1);
+                    Array.Resize(ref sumProd, len1);
+                    Array.Resize(ref result, len1);
                     if (code_cl[i] == codeCl[j])
                     {
                         for (int k = 0; k < len2; k++)
@@ -141,32 +103,9 @@ namespace Coursework
                         }
                     }
                 }
-                dataGridView1.Rows.Add(codeCl[i], fio[i], counter[i], sumProd[i], result[i]);
-            }
-
-        }
-
-        private void DGV2()
-        {
-            int result=0;
-            for(int i=0; i < len_sell; i++)
-            {
-                for (int j = 0; j < len2; j++)
-                {
-                    if (codeProd[i] == code_prod[j])
-                    {
-                        result = num[i] * Convert.ToInt32(value[j]);
-                    }
-                }
-                if (result == 0)
-                {
-                    dataGridView1.Rows[i].Cells[4].Value = 0;
-                }
-                else
-                    dataGridView1.Rows[i].Cells[4].Value = result; 
+                //добавление в таблицу
+                dataGridView1.Rows.Add(code_cl[i], fio[i], counter[i], sumProd[i], result[i]);
             }
         }
-
-
     }
 }

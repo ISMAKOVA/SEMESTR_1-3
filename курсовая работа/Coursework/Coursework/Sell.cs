@@ -18,7 +18,9 @@ namespace Coursework
         int numUpD;
         int num_row;
         int code_sell;
+        int maxValue;
         string dt;
+        int[] max = new int[0];
         string[] add_cl_code = new string[0];
         string[] codeCl = new string[0];
         string[] fio = new string[0];
@@ -76,6 +78,9 @@ namespace Coursework
                 if (sells != null)
                 {
                     string[] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
+                    Array.Resize(ref max, sells.Length);
+                    max[i] = Convert.ToInt32(ss[0]);
+                    maxValue = max.Max();
                     for (int j = 0; j < len1; j++)
                     {
                         if (ss[1] == codeCl[j])
@@ -91,13 +96,20 @@ namespace Coursework
                     }
                 }
             }
+            if (maxValue != 0)
+            {
+                code_sell = maxValue + 1;
+            }
+            else
+            {
+                code_sell = 1;
+            }
         }
 
 
 
         private void add_btn_Click(object sender, EventArgs e)
         {
-
             numUpD = (int)numericUpDown1.Value;
             dt = dateTimePicker1.Value.ToShortDateString();
             Array.Resize(ref cCl, client_code.Text.Length);
@@ -106,15 +118,14 @@ namespace Coursework
             if (cCl[0] != "" && cProd[0]!="" && numUpD!=0)
             {
                 dataGridView1.Rows.Add(code_sell, cCl[0],cCl[1], cProd[0],cProd[1], cProd[2], numUpD, dt);
-                code_sell++;
-                textBox1.Text = code_sell.ToString();
+                //textBox1.Text = code_sell.ToString();
             }
             client_code.SelectedIndex = -1;
             product_code.SelectedIndex = -1;
             numericUpDown1.Value = 0;
-            code_sell++;
             add_btn.Enabled = false;
-
+            code_sell++;
+            textBox1.Text = code_sell.ToString();
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
@@ -149,20 +160,31 @@ namespace Coursework
             product_code.SelectedIndex = -1;
             numericUpDown1.Value = 0;
             add_btn.Enabled = true;
-            
         }
 
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            code_sell = Convert.ToInt32((length + 1).ToString());
-            num_row = dataGridView1.CurrentCell.RowIndex;
-            textBox1.Text = dataGridView1.Rows[num_row].Cells[0].Value.ToString();
-            numericUpDown1.Value = Convert.ToInt32( dataGridView1.Rows[num_row].Cells[6].Value);
-            
-            string kodCl = dataGridView1.Rows[num_row].Cells[1].Value.ToString();
+            string kodCl = "";
+            string kodProd = "";
+            // code_sell = Convert.ToInt32((length + 1).ToString());
+            if (dataGridView1.CurrentCell == null)
+            {
+                num_row = 0;
+                textBox1.Text = "";
+                numericUpDown1.Value = 0;
+                kodCl = "";
+                kodProd = "";
+            }
+            else
+            {
+                num_row = dataGridView1.CurrentCell.RowIndex;
+                textBox1.Text = dataGridView1.Rows[num_row].Cells[0].Value.ToString();
+                numericUpDown1.Value = Convert.ToInt32(dataGridView1.Rows[num_row].Cells[6].Value);
+                kodCl = dataGridView1.Rows[num_row].Cells[1].Value.ToString();
+                kodProd = dataGridView1.Rows[num_row].Cells[3].Value.ToString();
+            }
             int index = Array.IndexOf(codeCl, kodCl);
             client_code.SelectedIndex = index;
-            string kodProd = dataGridView1.Rows[num_row].Cells[3].Value.ToString();
             int ind = Array.IndexOf(codeProd, kodProd);
             product_code.SelectedIndex = ind;
         }

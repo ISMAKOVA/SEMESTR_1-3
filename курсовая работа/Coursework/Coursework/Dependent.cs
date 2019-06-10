@@ -32,7 +32,7 @@ namespace Coursework
             InitializeComponent();
         }
         public void Loadc()
-        {
+        {//считывание информации с файлов
             string[] client = File.ReadAllLines("client.txt", Encoding.GetEncoding(1251));
             len = client.Length;
             for (int i = 0; i < len; i++)
@@ -40,8 +40,8 @@ namespace Coursework
                 Array.Resize(ref code_cl, len);
                 Array.Resize(ref fio, len);
                 string[] ss = client[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                code_cl[i] = int.Parse(ss[0]);
-                fio[i] = ss[1];
+                code_cl[i] = int.Parse(ss[0]);//код клиента
+                fio[i] = ss[1];//фамилии клиентов
             }
 
             string[] text_prod = File.ReadAllLines("product.txt", Encoding.GetEncoding(1251));
@@ -54,9 +54,9 @@ namespace Coursework
                 if (text_prod[i] != "")
                 {
                     string[] ss = text_prod[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                    code_prod[i] = Convert.ToInt32(ss[0]);
-                    product[i] = ss[1];
-                    value[i] = ss[2];
+                    code_prod[i] = Convert.ToInt32(ss[0]);//код товара
+                    product[i] = ss[1];//товары
+                    value[i] = ss[2];//стоимость товаров
                 }
             }
             string[] sells = File.ReadAllLines("sell.txt", Encoding.GetEncoding(1251));
@@ -70,11 +70,11 @@ namespace Coursework
                 Array.Resize(ref date, len_sell);
 
                 string[] ss = sells[i].Split(new char[] { '#' }, StringSplitOptions.RemoveEmptyEntries);
-                codeSell[i] = Convert.ToInt32(ss[0]);
-                codeCl[i] = Convert.ToInt32(ss[1]);
-                codeProd[i] =Convert.ToInt32(ss[2]);
-                num[i] = Convert.ToInt32(ss[3]);
-                date[i] = ss[4];
+                codeSell[i] = Convert.ToInt32(ss[0]);//код продажи
+                codeCl[i] = Convert.ToInt32(ss[1]);//внешний ключ кода клиентов
+                codeProd[i] =Convert.ToInt32(ss[2]);//внешний ключ кода товара
+                num[i] = Convert.ToInt32(ss[3]);//количество купленного товара
+                date[i] = ss[4];//дата покупки
             }
 
 
@@ -100,16 +100,16 @@ namespace Coursework
             dataGridView2.Rows.Clear();
             textBox1.Text = "";
             int result = 0;
-            num_row = dataGridView1.CurrentCell.RowIndex;
+            num_row = dataGridView1.CurrentCell.RowIndex;//индекс текущей строки
 
-            int kodeCl = Convert.ToInt32(dataGridView1.Rows[num_row].Cells[0].Value.ToString());
+            int kodeCl = Convert.ToInt32(dataGridView1.Rows[num_row].Cells[0].Value.ToString());//номер клиента, выбранный в данный момент
             for(int i = 0; i < len_sell; i++)
             {
-                if (kodeCl == codeCl[i])
+                if (kodeCl == codeCl[i])//если текущий код клиента совпадет с кодом клиента в продажах то:
                 {
                     for (int j = 0; j < len_sell; j++) {
 
-                        if (codeProd[i] == code_prod[j]) {
+                        if (codeProd[i] == code_prod[j]) {//если код продукта в продажак совпадет с кодом продукта в товарах,то:
                             result += Convert.ToInt32(value[j]) * num[i];
                             dataGridView2.Rows.Add(codeSell[i], codeProd[i], product[j], value[j], num[i], date[j]);
                             textBox1.Text = result.ToString();
@@ -117,12 +117,6 @@ namespace Coursework
                     }
                 }
             }
-
-
-
-           
-
-
         }
     }
 }
