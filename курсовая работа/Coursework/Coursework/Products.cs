@@ -81,9 +81,16 @@ namespace Coursework
 
         private void change_btn_Click(object sender, EventArgs e)
         {
-            product[num_row] = textBox2.Text;
-            value[num_row] = textBox3.Text;
-            DGV(len);
+            if (textBox2.Text == "" || textBox3.Text == "")
+            {
+                MessageBox.Show("Поля пустые");
+            }
+            else
+            {
+                product[num_row] = textBox2.Text;
+                value[num_row] = textBox3.Text;
+                DGV(len);
+            }
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -109,6 +116,7 @@ namespace Coursework
                 product[len - 1] = textBox2.Text;
                 value[len - 1] = textBox3.Text;
                 DGV(len);
+                new_btn.Enabled = true;
             }
 
         }
@@ -160,6 +168,7 @@ namespace Coursework
                     textBox1.Text = code.ToString();
                     textBox2.Text = "";
                     textBox3.Text = "";
+                    new_btn.Enabled = false;
                 }
             }
             catch {

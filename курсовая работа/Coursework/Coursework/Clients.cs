@@ -128,13 +128,21 @@ namespace Coursework
                 code++;
                 textBox1.Text = code.ToString();
                 textBox2.Text = "";
+                new_btn.Enabled = false;
             }
         }
 
         private void Change_btn_Click(object sender, EventArgs e)
         {
-            fio[num_row] = textBox2.Text;
-            DGV(len);
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Поле пустое");
+            }
+            else
+            {
+                fio[num_row] = textBox2.Text;
+                DGV(len);
+            }
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
@@ -148,6 +156,7 @@ namespace Coursework
             {
                 fio[len - 1] = textBox2.Text;
                 DGV(len);
+                new_btn.Enabled = true;
             }
         }
     }
