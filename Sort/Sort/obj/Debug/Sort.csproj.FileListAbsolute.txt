@@ -1,0 +1,7 @@
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Sort\Sort\obj\Debug\Sort.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Sort\Sort\obj\Debug\Sort.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Sort\Sort\bin\Debug\Sort.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Sort\Sort\bin\Debug\Sort.exe
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Sort\Sort\bin\Debug\Sort.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Sort\Sort\obj\Debug\Sort.exe
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Sort\Sort\obj\Debug\Sort.pdb
