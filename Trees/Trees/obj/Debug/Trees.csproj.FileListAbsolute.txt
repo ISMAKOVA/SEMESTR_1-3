@@ -1,0 +1,7 @@
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Trees\Trees\bin\Debug\Trees.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Trees\Trees\bin\Debug\Trees.exe
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Trees\Trees\bin\Debug\Trees.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Trees\Trees\obj\Debug\Trees.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Trees\Trees\obj\Debug\Trees.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Trees\Trees\obj\Debug\Trees.exe
+C:\Users\Даяна Исмакова\Desktop\универ\СИАКОД\Trees\Trees\obj\Debug\Trees.pdb
