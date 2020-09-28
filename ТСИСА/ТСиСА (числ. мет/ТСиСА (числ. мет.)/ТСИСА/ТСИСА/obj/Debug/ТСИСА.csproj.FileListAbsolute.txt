@@ -1,0 +1,7 @@
+C:\Users\Даяна Исмакова\Desktop\универ\ТСИСА\ТСИСА\bin\Debug\ТСИСА.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\ТСИСА\ТСИСА\bin\Debug\ТСИСА.exe
+C:\Users\Даяна Исмакова\Desktop\универ\ТСИСА\ТСИСА\bin\Debug\ТСИСА.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\ТСИСА\ТСИСА\obj\Debug\ТСИСА.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\ТСИСА\ТСИСА\obj\Debug\ТСИСА.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\ТСИСА\ТСИСА\obj\Debug\ТСИСА.exe
+C:\Users\Даяна Исмакова\Desktop\универ\ТСИСА\ТСИСА\obj\Debug\ТСИСА.pdb
