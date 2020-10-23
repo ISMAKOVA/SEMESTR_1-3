@@ -1,0 +1,10 @@
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\bin\Debug\MS_4.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\bin\Debug\MS_4.exe
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\bin\Debug\MS_4.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\obj\Debug\MS_4.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\obj\Debug\MS_4.Form1.resources
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\obj\Debug\MS_4.Properties.Resources.resources
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\obj\Debug\MS_4.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\obj\Debug\MS_4.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\obj\Debug\MS_4.exe
+C:\Users\Даяна Исмакова\Desktop\универ\Моделирование систем\MS_4\MS_4\obj\Debug\MS_4.pdb
