@@ -1,0 +1,6 @@
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\LogicalOperationsLibrary\bin\Debug\LogicalOperationsLibrary.dll
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\LogicalOperationsLibrary\bin\Debug\LogicalOperationsLibrary.pdb
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\LogicalOperationsLibrary\obj\Debug\LogicalOperationsLibrary.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\LogicalOperationsLibrary\obj\Debug\LogicalOperationsLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\LogicalOperationsLibrary\obj\Debug\LogicalOperationsLibrary.dll
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\LogicalOperationsLibrary\obj\Debug\LogicalOperationsLibrary.pdb

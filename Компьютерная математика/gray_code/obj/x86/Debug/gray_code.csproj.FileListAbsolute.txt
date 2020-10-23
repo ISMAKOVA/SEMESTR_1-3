@@ -1,0 +1,6 @@
+/Users/daana/Projects/computer-mathematics/gray_code/bin/Debug/gray_code.exe
+/Users/daana/Projects/computer-mathematics/gray_code/bin/Debug/gray_code.pdb
+/Users/daana/Projects/computer-mathematics/gray_code/obj/x86/Debug/gray_code.csprojAssemblyReference.cache
+/Users/daana/Projects/computer-mathematics/gray_code/obj/x86/Debug/gray_code.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/computer-mathematics/gray_code/obj/x86/Debug/gray_code.exe
+/Users/daana/Projects/computer-mathematics/gray_code/obj/x86/Debug/gray_code.pdb

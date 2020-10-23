@@ -1,0 +1,6 @@
+/Users/daana/Projects/computer-mathematics/KM_02/bin/Debug/KM_02.exe
+/Users/daana/Projects/computer-mathematics/KM_02/bin/Debug/KM_02.pdb
+/Users/daana/Projects/computer-mathematics/KM_02/obj/x86/Debug/KM_02.csprojAssemblyReference.cache
+/Users/daana/Projects/computer-mathematics/KM_02/obj/x86/Debug/KM_02.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/computer-mathematics/KM_02/obj/x86/Debug/KM_02.exe
+/Users/daana/Projects/computer-mathematics/KM_02/obj/x86/Debug/KM_02.pdb
