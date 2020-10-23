@@ -1,0 +1,35 @@
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.exe.config
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.exe
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.pdb
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csprojAssemblyReference.cache
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form1.resources
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Properties.Resources.resources
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csproj.GenerateResource.cache
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csproj.CoreCompileInputs.cache
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.exe
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.pdb
+C:\Users\Анастасия\source\repos\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form2.resources
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csprojAssemblyReference.cache
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form1.resources
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form2.resources
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Properties.Resources.resources
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csproj.GenerateResource.cache
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csproj.CoreCompileInputs.cache
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.exe
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.pdb
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.exe.config
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.exe
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.pdb
+C:\Users\Анастасия\Desktop\ИСит 2 курс\ИС\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form3.resources
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.exe.config
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.exe
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\bin\Debug\ИСвЭиУ-2.pdb
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form1.resources
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form2.resources
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Form3.resources
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ_2.Properties.Resources.resources
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.exe
+C:\Users\Даяна Исмакова\Desktop\универ\ИСвЭиУ\ИСвЭиУ-2\ИСвЭиУ-2\ИСвЭиУ-2\obj\Debug\ИСвЭиУ-2.pdb
