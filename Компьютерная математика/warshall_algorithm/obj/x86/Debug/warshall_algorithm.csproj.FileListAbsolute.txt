@@ -1,0 +1,12 @@
+/Users/daana/Projects/warshall_algorithm/bin/Debug/warshall_algorithm.exe
+/Users/daana/Projects/warshall_algorithm/bin/Debug/warshall_algorithm.pdb
+/Users/daana/Projects/warshall_algorithm/obj/x86/Debug/warshall_algorithm.csprojAssemblyReference.cache
+/Users/daana/Projects/warshall_algorithm/obj/x86/Debug/warshall_algorithm.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/warshall_algorithm/obj/x86/Debug/warshall_algorithm.exe
+/Users/daana/Projects/warshall_algorithm/obj/x86/Debug/warshall_algorithm.pdb
+/Users/daana/Projects/computer-mathematics/warshall_algorithm/bin/Debug/warshall_algorithm.exe
+/Users/daana/Projects/computer-mathematics/warshall_algorithm/bin/Debug/warshall_algorithm.pdb
+/Users/daana/Projects/computer-mathematics/warshall_algorithm/obj/x86/Debug/warshall_algorithm.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/computer-mathematics/warshall_algorithm/obj/x86/Debug/warshall_algorithm.exe
+/Users/daana/Projects/computer-mathematics/warshall_algorithm/obj/x86/Debug/warshall_algorithm.pdb
+/Users/daana/Projects/computer-mathematics/warshall_algorithm/obj/x86/Debug/warshall_algorithm.csprojAssemblyReference.cache

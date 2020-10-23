@@ -1,0 +1,6 @@
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\TaskLibrary\bin\Debug\TaskLibrary.dll
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\TaskLibrary\bin\Debug\TaskLibrary.pdb
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\TaskLibrary\obj\Debug\TaskLibrary.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\TaskLibrary\obj\Debug\TaskLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\TaskLibrary\obj\Debug\TaskLibrary.dll
+C:\Users\Даяна Исмакова\Desktop\проги\computer-mathematics\TaskLibrary\obj\Debug\TaskLibrary.pdb

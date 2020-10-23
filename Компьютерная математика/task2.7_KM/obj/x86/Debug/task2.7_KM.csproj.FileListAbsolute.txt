@@ -1,0 +1,12 @@
+/Users/daana/Projects/task2.7_KM/obj/x86/Debug/task2.7_KM.csprojAssemblyReference.cache
+/Users/daana/Projects/task2.7_KM/obj/x86/Debug/task2.7_KM.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/task2.7_KM/bin/Debug/task2.7_KM.exe
+/Users/daana/Projects/task2.7_KM/bin/Debug/task2.7_KM.pdb
+/Users/daana/Projects/task2.7_KM/obj/x86/Debug/task2.7_KM.exe
+/Users/daana/Projects/task2.7_KM/obj/x86/Debug/task2.7_KM.pdb
+/Users/daana/Projects/computer-mathematics/task2.7_KM/bin/Debug/task2.7_KM.exe
+/Users/daana/Projects/computer-mathematics/task2.7_KM/bin/Debug/task2.7_KM.pdb
+/Users/daana/Projects/computer-mathematics/task2.7_KM/obj/x86/Debug/task2.7_KM.csprojAssemblyReference.cache
+/Users/daana/Projects/computer-mathematics/task2.7_KM/obj/x86/Debug/task2.7_KM.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/computer-mathematics/task2.7_KM/obj/x86/Debug/task2.7_KM.exe
+/Users/daana/Projects/computer-mathematics/task2.7_KM/obj/x86/Debug/task2.7_KM.pdb
