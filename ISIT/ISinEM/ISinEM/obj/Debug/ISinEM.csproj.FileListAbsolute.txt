@@ -1,0 +1,21 @@
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\bin\Debug\ISinEM.exe.config
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\bin\Debug\ISinEM.exe
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\bin\Debug\ISinEM.pdb
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\obj\Debug\ISinEM.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\obj\Debug\ISinEM.Form1.resources
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\obj\Debug\ISinEM.Properties.Resources.resources
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\obj\Debug\ISinEM.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\obj\Debug\ISinEM.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\obj\Debug\ISinEM.exe
+C:\Users\Даяна Исмакова\Desktop\iCloudDrive\универские штучки\универ\ISinEM\ISinEM\obj\Debug\ISinEM.pdb
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\bin\Debug\ISinEM.exe.config
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\bin\Debug\ISinEM.exe
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\bin\Debug\ISinEM.pdb
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.csprojAssemblyReference.cache
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.Form1.resources
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.Properties.Resources.resources
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.csproj.GenerateResource.cache
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.csproj.CoreCompileInputs.cache
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.exe
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.pdb
+C:\Users\Даяна Исмакова\iCloudDrive\ИСвЭиУ\ISinEM\ISinEM\obj\Debug\ISinEM.Form2.resources
