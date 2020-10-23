@@ -1,0 +1,6 @@
+/Users/daana/Projects/3labaKM/bin/Debug/3labaKM.exe
+/Users/daana/Projects/3labaKM/bin/Debug/3labaKM.pdb
+/Users/daana/Projects/3labaKM/obj/x86/Debug/3labaKM.csprojAssemblyReference.cache
+/Users/daana/Projects/3labaKM/obj/x86/Debug/3labaKM.csproj.CoreCompileInputs.cache
+/Users/daana/Projects/3labaKM/obj/x86/Debug/3labaKM.exe
+/Users/daana/Projects/3labaKM/obj/x86/Debug/3labaKM.pdb
