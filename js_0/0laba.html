@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="0laba.css">
+	<title>Документ HTML</title>
+</head>
+<body>
+<script language="JavaScript">
+function vyvod()
+{
+peremennaya5=" ";
+peremennaya1=document.anketa.Surname.value;
+peremennaya2=document.anketa.Name.value;
+
+if (document.anketa.reg.checked)
+peremennaya3="Зарегистрированный";
+else(document.anketa.freg.checked)
+peremennaya3 = "Незарегистрированный";
+
+peremennaya4 = anketa.age.options[anketa.age.selectedIndex].value;
+
+if (document.anketa.hobby[0].checked)
+peremennaya5 += "Книги <br> ";
+if (document.anketa.hobby[1].checked)
+peremennaya5 += "Музыка на CD <br> ";
+if (document.anketa.hobby[2].checked)
+peremennaya5 += "Программное обеспечение <br> ";
+if (document.anketa.hobby[3].checked)
+peremennaya5 += "Канцелярские товары <br> ";
+if (document.anketa.hobby[4].checked)
+peremennaya5 += "Сувениры <br> ";
+else peremennaya5 += document.anketa.another.value;
+
+peremennaya6 = document.anketa.com.value;
+
+document.write('<body><head><link rel="stylesheet" type="text/css" href="1laba.css"></head>');
+
+document.write("<h3>");
+document.write("<span>Информация о покупателе</span><br>")
+document.write("<span class='a'>Фамилия: </span>"+peremennaya1+"<br>");
+document.write("<span class='a'>Имя: </span> "+peremennaya2+"<br>");
+document.write("<span class='a'> Я: </span> "+peremennaya3+"<br>")
+document.write("<span class='a'>Возраст: </span>" + peremennaya4 +"<br>");
+document.write("<span class='a'>Товары представляющий интерес: </span> <br> "+peremennaya5 +"<br>");
+document.write("<span class='a'> Пожелания покупателя: </span><br> "+peremennaya6 +"<br>");
+document.write("</h3>");  
+document.write("</body>");  
+ }
+
+</script>
+<form name="anketa">
+	<h1>Анкета покупателя</h1>
+1.Фамилия: <input type="text" name="Surname"><br>
+2.Имя:<input type="text" name="Name"><br>
+3.Возраст: <select name="age">
+	<option value="До 18 лет ">До 18 лет</option>
+	<option value="От 19 до 30">От 19 до 30</option>
+	<option value="От 31 до 65">От 31 до 65</option>
+	<option value="Старше 66">Старше 66</option>
+</select><br>
+4.Я:<br>
+<input type="radio" name="reg" value="reg">Зарегистрированный покупатель<br>
+<input type="radio" name="freg" value="freg">Впервые пользуюсь услугами магазина<p>
+5.Меня интересуют: <br>
+<input type="checkbox" name="hobby">Книги <br>
+<input type="checkbox" name="hobby">Музыка на CD <br>
+<input type="checkbox" name="hobby">Программное обеспечение <br>
+<input type="checkbox" name="hobby">Канцелярские товары <br>
+<input type="checkbox" name="hobby">Сувениры <br>
+Другое:<input type="text" name="another"><br>
+6.Мои пожелания и рекомендации:<br>
+<textarea name="com"></textarea>
+<br><input type=button  onClick="vyvod()" value="Отправить форму">
+<br><input type="reset"  value="Обновить анкету">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

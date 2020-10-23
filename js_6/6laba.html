@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="6laba.css">
+	<script src="6laba.js"></script>
+	<title>Создание, обработка и сортировка линейного массива в JavaScript</title>
+</head>
+<body>
+	<div class="flex-cont">
+		<form name="array">
+			<div id="first">Число элементов массива <input type="text" name="number"  id="number" placeholder="0" onchange="undis()"> 
+				<input type="button" name="newArr" id="newArr" value=" Создать массив" onclick="createNewArr()" disabled="true">
+			</div>
+			<div id= "source"> <p>Исходный массив</p><input type="text" name="sourceArr" id="sourceArr" placeholder="0" onchange="enter()"><div id="ish"></div> </div>
+			<fieldset id="get">
+				<legend>Определить</legend>
+				<p><input type="checkbox" name="checkbox" id="min" value="min" onchange="change()">Минимальный элемент<input type="text" name="min" id="mint" ></p>
+				<p><input type="checkbox" name="checkbox" id="max" value="max" onchange="change()">Максимальный элемент<input type="text" name="max" id="maxt"></p>
+				<p><input type="checkbox" name="checkbox" id="sum" value="sum" onchange="change()">Сумма элементов<input type="text" name="sum" id="sumt"></p>
+				<p><input type="checkbox" name="checkbox" id="neg" value="neg" onchange="change()">Число отрицательных<input type="text" name="neg" id="negt"></p>
+				<p><input type="checkbox" name="checkbox" id="pos" value="pos" onchange="change()">Число не отрицательных<input type="text" name="pos" id="post"></p>
+			</fieldset>
+			<fieldset id="sorted">
+				<legend>Сортировать</legend>
+				<p><input type="radio" id="up" name="sort" value="a1" >По возрастанию</p>
+				<p><input type="radio" id="down" name="sort" value="a2">По убыванию</p>
+				<p><input type="radio" id="without" name="sort"  value="a3" >Без сортировки</p>
+			</fieldset>
+			<div id= "getArray">Отсортированный массив<input type="text" name="getArr" id="getArr"></div>
+			<input type="button" name="count" value="Вычислить" onclick="pupa()">
+			<input type="reset" name="reset" value="Обновить">
+		</form>
+	</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

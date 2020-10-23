@@ -1,0 +1,25 @@
+body{
+	font-family: Arial;
+	font-size: 14pt;
+	display: flex;
+	justify-content: center;
+}
+form{
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #F0FFFF;
+	transition: 2s;
+}
+#rrr {
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #E6E6FA;
+	width: 30%;
+
+}
+#rrr p{
+	color: #000;
+	padding-left: 20px;
+}

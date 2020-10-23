@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="laba1.css">
+	<meta charset="utf-8">
+	<script  src="laba10.js"></script>
+	<title>laba 10</title>
+</head>
+<body>
+	<form name="laba10">
+<p style="font-size: 14pt">Введите текст: <input id="client_text"type="text" name="text"></p><br>
+<input type="radio" name="font" value="14 pt"> 14 pt<br>
+<input type="radio" name="font" value="18 pt"> 18 pt<br>
+<input type="radio" name="font" value="24 pt"> 24 pt<br>
+<input type="radio" name="font" value="28 pt"> 28 pt<br>
+<br>
+<input type="button" onClick="font_size()" value="Вывести размер шрифта"><br>
+</form>
+<div id="rrr">Результат:</div>
+
+<script>
+	function font_size() {	
+  var text =document.laba10.text.value;
+  var font = document.forms[0];
+  var txt = "";
+  var num;
+  var arr =[];
+  var i;
+
+  for (i = 0; i < font.length; i++) {
+
+    if (font[i].checked) {
+      txt = txt + font[i].value + " ";
+      num = parseInt(txt);
+
+      for(var i=0; i<4;i++){
+      	arr.push(num);
+      	num = num-2; 
+      }
+    }
+  }
+  
+
+document.getElementById("rrr").innerHTML = "<p>Результат:</p>"+
+"<p style='font-size:"+arr[0] + "pt'>" + text + " "+ arr[0]+"pt"+ "</p>" + 
+"<p style='font-size:"+arr[1] + "pt'> " + text + " "+ arr[1]+"pt"+  "</p>"+
+"<p style='font-size:"+arr[2] + "pt'> " + text + " "+ arr[2]+"pt"+ "</p>";
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

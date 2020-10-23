@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="4laba.css">
+	<title>Работа управляющего элемента checkbox в JavaScript</title>
+</head>
+<body>
+	<div class="flex-cont">
+	
+<form name="menu">
+	<h1>Сделайте заказ</h1>
+	<div class="flex">
+<div class="list">
+	<div class="items">	<input type="checkbox" name="check" value="Фаршированная форель - 369 руб." onchange ="count()">Фаршированная форель</div>
+	<div class="items">	<input type="checkbox" name="check" value="Телятина под соусом - 349 руб." onchange="count()">Телятина под соусом </div>
+	<div class="items">	<input type="checkbox" name="check" value="Крем-суп из шампиньонов - 189 руб." onchange="count()">Крем-суп из шампиньонов</div>
+	<div class="items">	<input type="checkbox" name="check" value="Рулет со шпинатом - 179 руб." onchange="count()">Рулет со шпинатом</div>
+	<div class="items">	<input type="checkbox" name="check" value="Пицца Гавайская - 299 руб." onchange="count()">Пицца Гавайская</div>
+	<div class="items">	<input type="checkbox" name="check" value="Ванильный коктейль - 149 руб." onchange="count()">Ванильный коктейль</div>
+	<div class="items">	<input type="checkbox" name="check" value="Напиток Грейпфрукт - 199 руб." onchange="count()">Напиток Грейпфрукт</div>
+</div>
+<img src="" id="pic" width="300" height="300" style="display: none;">
+</div>
+	<div class="total">
+		<p>Счет</p> <textarea id="total" disabled="true"></textarea>
+	</div>
+	<input type="button" name="submit" value="Заказать" onclick="order()">
+</form>
+<div id="order" style="display: none;"> <p>Ваш заказ</p></div>
+</div>
+
+<script type="text/javascript">
+	var imgArray = new Array();
+	imgArray[0] = new Image();
+	imgArray[0].src = '1.png' ;
+
+	imgArray[1] = new Image();
+	imgArray[1].src = '2.png';
+
+	imgArray[2] = new Image();
+	imgArray[2].src = '3.png';
+
+	imgArray[3] = new Image();
+	imgArray[3].src = '4.png';
+
+	imgArray[4] = new Image();
+	imgArray[4].src = 'pizza.png' ;
+
+	imgArray[5] = new Image();
+	imgArray[5].src = '6.png' ;
+
+	imgArray[6] = new Image();
+	imgArray[6].src = '7.png';
+
+
+
+
+	var total=0;
+function count(){
+	var price = [369, 349, 189, 179, 299, 149, 199];
+	var result = 0;
+	var checkbox = document.forms[0];
+	for(var i=0; i< checkbox.length-2;i++){
+		if(checkbox[i].checked){
+			result= result+price[i];
+			total=result;
+			document.getElementById('pic').src = imgArray[i].src;
+			document.getElementById('pic').style.display="block";
+		}
+	}
+	document.getElementById('total').innerHTML = result +" руб.";
+
+}
+function order(){
+	var txt = "";
+	var checkbox = document.forms[0];
+	for(var i=0; i< checkbox.length-2;i++){
+		if(checkbox[i].checked){
+		txt = txt+"-"+checkbox[i].value +'<br>';	
+		}
+
+	}	
+	if (checkbox[0].checked==false && 
+		checkbox[1].checked==false && 
+		checkbox[2].checked==false && 
+		checkbox[3].checked==false && 
+		checkbox[4].checked==false && 
+		checkbox[5].checked==false && 
+		checkbox[6].checked==false  ){alert("вы ничего не выбрали")}
+		else{
+			document.getElementById('order').style.display="block";
+	document.getElementById('order').innerHTML = "<p>Ваш заказ</p>"+txt +"<br>"+"Итого:"+ total + " руб.";
+
+}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

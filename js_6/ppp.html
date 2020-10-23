@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+<input type="button" onclick="show()" value="click me">
+
+    <script>
+
+function getRandomNum(n){
+    var Arr=[];
+	for(var i=0; i<n;i++){
+        p=Math.round(Math.random()*(200)-100);
+        Arr.push(p);
+    }
+return Arr;
+}
+function getRandomArbitary(min, max){
+  return Math.random() * (max - min) + min;}
+
+function show(){
+	alert(getRandomNum(5));
+}
+
+
+</script>
+</body>
+</html>

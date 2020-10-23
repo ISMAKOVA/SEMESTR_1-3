@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 80%;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  color: #777777;
+  line-height: 1.4;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tabs {
+  padding: 10px;
+  min-width: 300px;
+  width: 400px;
+  min-height: 200px;
+  height: auto;
+  border: 2px solid #3caa3c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tabs_caption {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+}
+.tabs_caption li {
+  display: block;
+  padding: 5px;
+  margin: 0 3px;
+  background-color: #f5f5f5;
+  color: #575757;
+  border: 1px solid #f5f5f5;
+  border-radius: 10px 10px 0 0;
+}
+.tabs_caption li:not(.active):hover {
+    background-color: rgb(191, 216, 191);
+    color: #fff;
+    border: 0;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 2px 0px 3px rgb(153, 214, 153, 0.5);
+  }
+  .tabs_caption .active {
+  background-color: green;
+  color: #fff;
+  border: 2px solid rgb(27, 117, 27);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 2px 0px 3px rgb(153, 214, 153, 0.5);
+}
+a {
+  text-decoration: none;
+  font-weight: 600;
+  list-style: none;
+}
+.item{
+    list-style: none;
+    border: 2px solid rgb(211, 210, 210);
+    background-color: rgb(240, 240, 240);
+    color: #575757;
+    border-radius: 8px;
+    padding: 7px;
+    margin:50px 0 20px 0;
+}
+.item:hover{
+    border: 2px solid rgb(95, 167, 255);
+    background-color: rgb(152, 198, 250);
+    color: #fff;
+}
+.item:active{
+    border: 2px solid rgb(27, 120, 226);
+    background-color: rgb(32, 135, 253);
+    color: #fff;
+}
+.item.active{
+  border: 2px solid rgb(27, 120, 226);
+  background-color: rgb(32, 135, 253);
+  color: #fff;
+}
+.tabs_content.active {
+  display: block;
+  height: auto;
+}
+
+.tabs_content{
+    display: none;
+}
+.tab_text {
+  display: none;
+  height: auto;
+}
+

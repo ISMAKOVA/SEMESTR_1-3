@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="8laba.css">
+    <meta charset="UTF-8">
+    <script src="8laba.js"></script>
+    <title>Форма регистрации пользователей</title>
+</head>
+<body>
+    <div class="flex-cont">
+    <form onformchange="send()">
+       <p> 1.Фамилия <input type="text" id="surname" onblur="checkSurname()" placeholder="Иванов"> <span id="er1"></span></p>
+       <p> 2.Логин <input type="text" id="login" onblur="checkLogin()" placeholder="ivan20"> <span id="er2"></span></p>
+       <p> 3.Пароль<input type="text" id="password1" placeholder="********" onblur="getPasW1()"><span id="er3"></span> </p>
+       <p> 4.Подтвердите пароль <input type="text" id="password2" placeholder="********" onblur="getPasW2()"><span id="er4"></span>  </p>
+       <p> 5.Дата рождения<input type="text" id="date" placeholder="01.01.2019" onblur="checkDate()"><span id="er5"></span> </p>
+       <p> 6.Телефон<input type="text" id="number" placeholder="(555) 555-5555 " onblur="checkNum()"><span id="er6"></span>  </p>
+       <p> 7.ИНН<input type="text" id="inn" onblur="checkINN()"> <span id="er7"></span> </p>
+       <p> 8.Пол: Мужской <input type="radio" name = "sex" id="m" onchange="last()" value="Мужской">
+        Женский<input type="radio" name = "sex" id="w" onchange="last()" value="Женский"></p>
+       <P><input type="button" value="Отправить" id="button" disabled="true" onclick="send()"></P>
+       <p><input type="reset"value="Очистить" onclick="rere()"></p>
+    </form>
+    <div id="send" style="display: none;">
+       <p> 1.Фамилия: <span id="one"></span></p>
+       <p> 2.Логин:<span id="two"></span></p>
+       <p> 3.Пароль:<span id="three"></span></p>
+       <p> 4.Дата рождения:<span id="four"></span></p>
+       <p> 5.Телефон:<span id="five"></span></p>
+       <p> 6.ИНН:<span id="six"></span></p>
+       <p> 7.Пол:<span id="seven"></span></p>
+    </div>
+</div>
+
+
+</body>
+</html>

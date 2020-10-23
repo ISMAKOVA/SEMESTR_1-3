@@ -1,0 +1,18 @@
+body{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 22px;
+	font-family: Arial;
+	background-image: 
+}
+#nine,#eight{
+    border:2px solid #AFEEEE;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+#translation p, #nine p{
+font-weight: bolder;
+}

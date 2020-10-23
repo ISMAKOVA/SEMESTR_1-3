@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Вариант 2</title>
+</head>
+<body>
+    <div class="flex-cont">
+        <form action="" id="form">
+            <h3>1. Резюме </h3>
+           <div class="item">2. Фамилия Имя Отчество <input type="text" id="fio"></div>
+           <div class="item">3. Дата рождения<input type="date"  id="date"></div>
+           <div class="item">4. <input type="text"  id="age"></div>
+           <div class="item">5. 
+            <input type="radio" name="who" id="stud">
+            <label for="stud">Студент</label>
+            <input type="radio" name="who" id="grad">
+            <label for="grad">Выпускник</label>
+        </div>
+           <div class="item">6. Образование: учебное заведение:
+               <select id="education">
+                   <option value="ТюмГУ">ТюмГУ</option>
+                   <option value="ТюмИУ">ТюмИУ</option>
+               </select>
+           </div>
+           <div class="item">7. Специальность/ Направление
+               <textarea id="txt" cols="40" rows="5"></textarea></div>
+           <div class="item">8. Год выпуска <input type="date" id="end" disabled></div>
+           <div class="item">9. Должность
+               <select id="status">
+                   <option value="1">Системный администратор</option>
+                   <option value="2">Web-программист</option>
+                   <option value="3">Специалист по БД</option>
+                   <option value="4">Разработчик ИС</option>
+               </select>
+           </div>
+           <div class="item">10. Минимальная зарплата
+               <input type="text" name="" id="salary">
+           </div>
+           <div class="item"><input type="button" value="Отправить резюме" id="btn" onclick="YO()" disabled></div>
+        </form>
+        <div class="div"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

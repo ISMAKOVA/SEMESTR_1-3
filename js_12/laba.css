@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+#GameScreen{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    height: 100px;
+    width: 100%;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.blocks{
+    height: 600px;
+    width: 600px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    display: flex;
+    align-items: center;
+}
+.blocks div{
+    width: 146px;
+    height: 146px;
+    background-color: rgb(252, 233, 240);
+    border: 2px solid rgb(255, 212, 228);
+    background-size: 146px;
+
+}
+#SplashScreen{
+    position: absolute;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(96, 58, 107, 0.555);
+}
+#name{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+}
+#btn{
+    margin: 10px;
+    padding: 5px;
+    height: 70px;
+    width: 250px;
+    border: 1px solid rgb(155, 0, 95);
+    background-color: rgb(155, 0, 95);
+    border-radius: 5px;
+    font-size: 28px;
+    color: #fff;
+}
+#btn:hover{
+    border: 1px solid rgb(122, 13, 81);
+    background-color: rgb(122, 13, 81);
+}
+#btn:active{
+    border: 1px solid rgb(155, 0, 95);
+    background-color: rgb(155, 0, 95);
+    box-shadow: inset 2px 1px 4px rgb(46, 1, 22);
+}
+#txt{
+    font-size: 22px;
+    margin: 10px;
+    height: 30px;
+    width: 246px;
+    background-color: rgb(255, 241, 250);
+    color: rgb(122, 13, 81);
+}
+#name p{
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+}
+#timer, #points,#user{
+    color: rgb(122, 13, 81);
+    font-size: 40px;
+    margin: 0 20px;
+}
+#GameStop{
+    position: absolute;
+    top:0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(96, 58, 107, 0.555);
+}
+/* #bg{
+    height: 600px;
+    width: 600px;
+    background-color: rgb(122, 13, 81);
+} */
+#middle{
+    height: 50px;
+    color: rgb(122, 13, 81);
+}
+#result{
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+#win{
+    height: 260px;
+    width: 740px;
+}
+

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="9laba.css">
+    <script src="9laba.js"></script>
+    <title>Обращение к элементам формы – флажки, радиокнопки, списки</title>
+</head>
+<body>
+    <div class="flex-cont">
+    <form>
+        <H1>Страничка по заказу</H1>
+        <fieldset>
+            <legend>Параметры страницы</legend>
+            <p id="t1">Заголовок <input type="text" id="text1" onblur="getHeadline()"></p>
+            <p>Картинка:</p>
+            <p>
+            <div id="check" onchange="pic()">
+                <input type="checkbox" id="dog" name="anim">Собака 
+                <input type="checkbox" id="cat" name="anim">Кошка
+                <input type="checkbox" id="fish" name="anim">Рыбки
+                <input type="checkbox" id="flower" name="anim">Цветок
+            </div>
+            </p>
+            <p>Подпись <input type="text" id="text2" onblur="getText()"></p>
+            <p>Цвет фона: 
+            <select id="select" onchange="changeBgC()">
+                <option>Зеленый</option>
+                <option selected>Белый</option>
+                <option>Синий</option>
+                <option>Красный</option>
+            </select>
+        </p>
+        <div id="txtC" onchange="changeTxtC()">
+        <p>Цвет текста:</p>
+        <p><input type="radio" name="color">черный</p>
+        <p><input type="radio" name="color">синий</p>
+        <p><input type="radio" name="color">зеленый</p>
+        <p><input type="radio" name="color">белый</p>
+    </div>
+        </fieldset>
+        <input type="reset" value="Сбросить" onclick="getr()"> <input type="button" value="Показать" onclick="show()"> 
+    </form>
+    <div id="buba" style="display: none;">
+        <div id="one"></div>
+        <img id="pict" style="display: none;" width="350">
+        <div id="two"></div>
+
+    </div>
+</div>
+</body>
+</html>

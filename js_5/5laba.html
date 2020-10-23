@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="5laba.css">
+	<title>Работа управляющего элемента select в JavaScript</title>
+</head>
+<body>
+	<div class="flex">
+<form name="laba5">
+	<h2>Валютный калькулятор</h2>
+<div class="block"><span>Из</span> 
+	<select name="from">
+		<option value="Рубли">Рубли</option>
+		<option value="Евро">Евро</option>
+		<option value="Доллар">Доллар</option>
+		<option value="Фунт стерлингов">Фунт стерлингов</option>
+		<option value="Японская иена">Японская иена</option>
+		<option value="Китайская юань">Китайская юань</option>
+		<option value="Украинская гривна">Украинская гривна </option>
+		<option value="Казахский тенге">Казахский тенге</option>
+	</select>
+	<span>Курс</span>
+	<input type="text" name="exch" onblur="check()" id="exch"><div id="p"></div>
+</div>
+<div class="block"><span>В</span>
+	<select name="To">
+		<option value="Рубли">Рубли</option>
+		<option value="Евро">Евро</option>
+		<option value="Доллар">Доллар</option>
+		<option value="Фунт стерлингов">Фунт стерлингов</option>
+		<option value="Японская иена">Японская иена</option>
+		<option value="Китайская юань">Китайская юань</option>
+		<option value="Украинская гривна">Украинская гривна </option>
+		<option value="Казахский тенге">Казахский тенге</option>		
+	</select>
+	<span>Переводимая сумма</span>
+	<input type="text" name="sum" onblur="check()" id="sum"><div id="p"></div>
+</div>
+<div class="blockr">
+	<span>Результат</span>
+	<div id="txt"></div>
+</div>
+<input type="button" name="p" value="Посчитать" onclick="getRusult()">
+<input type="reset" name="o" value="Очистить" >
+</form>
+</div>
+<script type="text/javascript">
+function check(){
+	var exch = document.laba5.exch.value;
+	
+	if(exch.length<0 || isNaN(exch)){
+		document.getElementById('p').innerHTML="Ошибка, введите число";
+	}
+	else{
+		document.getElementById('p').innerHTML="";
+	}
+}
+function getRusult(){
+	var from = laba5.from.options[laba5.from.selectedIndex].value;
+	var to = laba5.To.options[laba5.To.selectedIndex].value;	
+	var value = document.getElementById('exch').value;
+	var sum = document.getElementById('sum').value;
+	var result = Math.round((sum/value)*100/100);
+
+	document.getElementById('txt').innerHTML = "Перевод " + from + "-"+ to +" по курсу "+ value + "<br>" + 
+	"К выдаче: " + result;
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

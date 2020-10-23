@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="9.1laba.css">
+    <script src="9.1laba.js"></script>
+    <title>9.1 laba</title>
+</head>
+<body>
+    <div class="flex-cont">
+        <form>
+            <h2>Страничка по заказу</h2>
+            <fieldset>
+                <legend>Параметры страницы</legend>
+                <div class="one">Заголовок 
+                    <input type="text" id="text1">
+                </div>
+                <div class="two">
+                    <p>Картинка:</p>                    
+                    <div class="options">
+                        <input type="checkbox" name="anim" id="">Собака
+                        <input type="checkbox" name="anim" id="">Кошка
+                        <input type="checkbox" name="anim" id="">Рыбки
+                        <input type="checkbox" name="anim" id="">Цветок
+                    </div>
+                </div>
+                <div class="three">Подпись
+                    <input type="text" id="text2">
+                </div>
+                <div class="four">Цвет фона:
+                    <select id="select">
+                    <option value="#90EE90">Зеленый</option>
+                    <option value="#fff">Белый</option>
+                    <option value="#AFEEEE">Синий</option>
+                    <option value="#CD5C5C">Красный</option>
+                    </select>
+                </div>
+                <div class="five">Цвет текста:
+                    <p><input type="radio" name="color">черный</p>
+                    <p><input type="radio" name="color">синий</p>
+                    <p><input type="radio" name="color">зеленый</p>
+                    <p><input type="radio" name="color">белый</p>
+                </div>
+                <div class="btn">
+                    <input class="button" type="reset" value="Сбросить">
+                    <input class="button" type="button" value="Показать" onclick="create();return false;" >
+                </div>
+            </fieldset>
+        </form>
+        <div id="nothing"></div>
+    </div>
+    
+</body>
+</html>

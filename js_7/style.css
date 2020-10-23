@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+	}
+body, html{
+	heigth:100%;
+	width:100%;
+	font-family: Arial;
+    font-size: 20px;
+}
+.flex-cont, form{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+}
+form{
+    min-width: 600px;
+	min-height: 450px;
+	width: 45%;
+	height: 50%;
+	border-radius: 10px;
+    box-shadow: 2px 7px 25px rgba(88,103,127,0.8);
+}
+fieldset{
+    padding: 20px;
+    margin-right: 20px;
+}
+div{
+    margin:7px 0;
+}
+p{
+    margin:7px 0;
+}

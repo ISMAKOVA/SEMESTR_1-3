@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с таймерами в JavaScript</title>
+    <link rel="stylesheet" href="laba9.css">
+    <script src="laba9.js"></script>
+</head>
+<body onload="start()">
+    <div class="flex-cont" >
+        <div class="blocks">
+        <div class="block" id="car1"></div>
+        <div class="block" id="car2"></div>
+        <div class="block" id="car3"></div>
+        <div class="block" id="car4"></div>
+        <!-- <div class="block" id="car5"></div>
+        <div class="block" id="car6"></div> -->
+    </div>
+
+       <div id="txt"><input type="text" id="carName" disabled=true></div>
+       <div id="btn"> 
+           <button type="button" id="start" data-action="start" onclick="Run()">Запустить карусель</button>
+           <button type="button" id="stop" data-action="stop" disabled=true onclick="Stop()">Останавить карусель</button>
+           <button type="button" id="stop" data-action="show" onclick="Show()">Показать</button>
+       </div>
+    </div>
+</body>
+</html>

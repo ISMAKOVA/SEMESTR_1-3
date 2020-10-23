@@ -1,0 +1,191 @@
+<html >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <title>Работа с датами JavaScript</title>
+</head>
+<body>
+    <div class="flex-cont">
+        <form name="date">
+            <div class="flex-div1">
+            <fieldset id="first">
+                <legend>Определить</legend>
+                <p><input type="radio" name="radio" id="days" value="a1">Количество дней</p>
+                <p> <input type="radio" name="radio" id="weekends" value="a2">Количество выходных</p>
+                <p> <input type="radio" name="radio" id="weekdays" value="a3">Количество рабочих дней</p>
+                <p> <input type="radio" name="radio" id="week" value="a4">Количество полных недель</p>
+                <p><input type="radio" name="radio" id="month" value="a5">Количество полных месяцев</p>
+            </fieldset>
+            <div class="r">
+                <p>Результат <input type="text" id="result"></p>
+                <input type="button" value="Вычислить" id="btn" onclick="prob()">
+            </div>
+        </div>
+            <div id="second">
+                <div class="start">
+                    <p>Начало периода</p>
+                    <input type="text" id="firstDate" placeholder="01.01.2000">
+                </div>
+                <div class="end">
+                    <p>Конец периода</p>
+                    <input type="date" id="secondDate">
+                </div>
+                <div id="erorr"></div>
+            </div>
+
+        </form>
+    </div>
+<script>
+    
+function prob(){
+   var ffDate = document.getElementById('firstDate').value;
+    var re = /(\d{2}|\d)(\/|-|\.|\,)(\d{2}|\d)(\/|-|\.|\,)(\d{4}|\d{2})/i;
+   var rep= re.exec(ffDate);
+   if(rep[rep.length-1]<100){rep[5]=20+rep[5];}
+   if(rep[1]<10 || rep[3]<10){
+       rep[1]=0+rep[1];
+       rep[3]=0+rep[3];
+    }
+
+   if(rep==null || rep[1]>31 || rep[3]>31){
+       alert("Не правильно введена дата");
+       document.getElementById('firstDate').value="";
+   }else{
+       
+   var firstDate = rep[5]+"-"+rep[3]+"-"+rep[1];
+    var secondDate = document.date.secondDate.value;
+    var fDate = new Date(firstDate);
+    var sDate = new Date(secondDate);
+
+    var days= Math.ceil((sDate.getTime()-fDate.getTime())/(1000*3600*24));
+    var radio = document.getElementsByName('radio');
+    if (days<0){
+        document.getElementById('erorr').innerHTML="Ошибка: начало периода позднее его конца";
+        document.getElementById('result').value="";
+    }
+else{
+    for(var i=0;i<radio.length;i++){
+        if(radio[i].checked && radio[i].type=="radio"){
+            switch(radio[i].value){
+                case 'a1':document.getElementById('result').value=days;
+                    document.getElementById('erorr').innerHTML="";
+                break;
+                case 'a2':document.getElementById('result').value=getFreeDays();
+                document.getElementById('erorr').innerHTML="";
+                break;
+                case 'a3':document.getElementById('result').value= days-getFreeDays();
+                document.getElementById('erorr').innerHTML="";
+                break;
+                case 'a4':document.getElementById('result').value=getWeekDays();
+                    document.getElementById('erorr').innerHTML="";
+                break;
+                case 'a5': document.getElementById('result').value= getFullMonth();
+                document.getElementById('erorr').innerHTML="";
+                break;
+
+            }
+        }
+    }
+}
+}
+}
+
+function getFreeDays(){
+    var ffDate = document.getElementById('firstDate').value;
+    var re = /(\d{2}|\d)(\/|-|\.|\,)(\d{2}|\d)(\/|-|\.|\,)(\d{4}|\d{2})/i;
+   var rep= re.exec(ffDate);
+   if(rep[rep.length-1]<100){rep[5]=20+rep[5];}
+   if(rep[1]<10 || rep[3]<10){
+       rep[1]=0+rep[1];
+       rep[3]=0+rep[3];
+    }
+   var firstDate = rep[5]+"-"+rep[3]+"-"+rep[1];
+
+    var secondDate = document.getElementById('secondDate').value;
+
+    var fDate = new Date(firstDate);
+    var sDate = new Date(secondDate);
+    
+    var days= Math.ceil(Math.abs(sDate.getTime()-fDate.getTime())/(1000*3600*24));
+    var day = new Date();
+    var work;
+    var weekend=0;
+    for (var i=0; i<days; i++){
+        day.setTime(fDate.getTime()+(1000*3600*24)*i);
+        work= day.getDay();
+        if((work==0) || (work==6)){
+            weekend++;
+        }
+    }
+    return weekend;
+}
+function getWeekDays(){
+   var ffDate = document.getElementById('firstDate').value;
+   var re = /(\d{2}|\d)(\/|-|\.|\,)(\d{2}|\d)(\/|-|\.|\,)(\d{4}|\d{2})/i;
+   var rep= re.exec(ffDate);
+   if(rep[rep.length-1]<100){rep[5]=20+rep[5];}
+   if(rep[1]<10 || rep[3]<10){
+       rep[1]=0+rep[1];
+       rep[3]=0+rep[3];
+    }
+   var firstDate = rep[5]+"-"+rep[3]+"-"+rep[1];
+
+    var secondDate = document.getElementById('secondDate').value;
+    var fDate = new Date(firstDate);
+    var sDate = new Date(secondDate);
+
+    var days= Math.ceil(Math.abs(sDate.getTime()-fDate.getTime())/(1000*3600*24));
+
+    var day = new Date();
+    var work;
+    var mon=0;
+    for (var i=0; i<days; i++){
+        day.setTime(fDate.getTime()+(1000*3600*24)*i);
+        work= day.getDay();
+
+        if(work==1){
+            mon++;
+        }
+    }
+        if(days>7 && sDate.getDate()!=1)
+        mon=mon-1;
+        if(days<7){
+            mon=0;
+        }
+    
+    return mon;
+}
+function getFullMonth(){
+   var ffDate = document.getElementById('firstDate').value;
+   var re = /(\d{2}|\d)(\/|-|\.|\,)(\d{2}|\d)(\/|-|\.|\,)(\d{4}|\d{2})/i;
+   var rep= re.exec(ffDate);
+   if(rep[rep.length-1]<100){rep[5]=20+rep[5];}
+   if(rep[1]<10 || rep[3]<10){
+       rep[1]=0+rep[1];
+       rep[3]=0+rep[3];
+    }
+   var firstDate = rep[5]+"-"+rep[3]+"-"+rep[1];
+
+    var secondDate = document.getElementById('secondDate').value;
+    var fDate = new Date(firstDate);
+    var sDate = new Date(secondDate);
+
+    var fYear= fDate.getFullYear();
+    var sYear = sDate.getFullYear();
+    var fMonth=fDate.getMonth();
+    var sMonth = sDate.getMonth();
+    var month;
+    if(sYear-fYear==0){
+        month=sMonth-fMonth;
+    }
+    k=0;
+    if(sMonth-fMonth!=0){
+        k=sYear-fYear;
+        month= sMonth+((sYear-fYear)*12)-fMonth;
+    }
+    return month;
+}
+
+    </script>
+</body>
+</html>
